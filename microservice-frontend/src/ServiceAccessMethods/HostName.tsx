@@ -1,0 +1,1 @@
+export let GatewayUrl = "http://localhost:5193"
