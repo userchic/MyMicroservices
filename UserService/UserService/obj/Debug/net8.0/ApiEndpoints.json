@@ -49,16 +49,6 @@
   },
   {
     "ContainingType": "AuthService.Controllers.UserController",
-    "Method": "LogOut",
-    "RelativePath": "User/LogOut",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AuthService.Controllers.UserController",
     "Method": "Register",
     "RelativePath": "User/Register",
     "HttpMethod": "POST",

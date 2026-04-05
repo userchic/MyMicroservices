@@ -17,9 +17,21 @@ namespace TextPostsService.Services
         {
             TextPost newPost = TextPost.Create(request,userId);
             newPost=await postRep.Create(newPost);
+            await postRep.Save();
             return newPost;
         }
-
+        public async Task<Result<TextPost, string>> UpdatePost(UpdatePostRequest request, int userId)
+        {
+            TextPost post = await postRep.GetUserPost(request.Id, userId);
+            if (post is null)
+            {
+                return post.ToResult("Не найден нужный пост или он не принадлежит вам");
+            }
+            post.Text = request.Text;
+            postRep.Update(post);
+            await postRep.Save();
+            return post;
+        }
         public async Task<Result<string, string>> DeletePost(int id,int userId)
         {
             TextPost postToBeDeleted = await postRep.GetUserPost(id,userId);
@@ -28,6 +40,7 @@ namespace TextPostsService.Services
                 return ((string)null).ToResult("Пост не найден или не принадлежит вам");
             }
             postRep.Delete(postToBeDeleted);
+            await postRep.Save();
             return "Успешно удален пост".ToResult("Ошибка? Но тут ведь невозможна ошибка!");
         }
 
@@ -42,16 +55,6 @@ namespace TextPostsService.Services
             return await postRep.GetUserPostsPage(page,userId);
         }
 
-        public async Task<Result<TextPost, string>> UpdatePost(UpdatePostRequest request,int userId)
-        {
-            TextPost post = await postRep.GetUserPost(request.Id,userId);
-            if(post is null)
-            {
-                return post.ToResult("Не найден нужный пост или он не принадлежит вам");
-            }
-            post.Text = request.Text;
-            postRep.Update(post);
-            return post;
-        }
+        
     }
 }

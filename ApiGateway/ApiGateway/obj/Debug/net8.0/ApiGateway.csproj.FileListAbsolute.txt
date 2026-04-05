@@ -95,3 +95,6 @@ C:\Users\Руслан Габзалилов\Desktop\myMicroservices\ApiGateway\Ap
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\ApiGateway\ApiGateway\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\ApiGateway\ApiGateway\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\ApiGateway\ApiGateway\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\ApiGateway\ApiGateway\bin\Debug\net8.0\System.IO.Hashing.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\ApiGateway\ApiGateway\bin\Debug\net8.0\Yarp.ReverseProxy.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\ApiGateway\ApiGateway\obj\Debug\net8.0\ApiGateway.sourcelink.json

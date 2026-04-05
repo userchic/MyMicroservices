@@ -117,11 +117,11 @@
       ],
       "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
     }
-    
-  ] ,
+
+  ],
   "GlobalConfiguration": {
     "DangerousAcceptAnyServerCertificateValidator": true,
     "DangerousAcceptAnyHeaderValue": true
   },
-  
+
 }

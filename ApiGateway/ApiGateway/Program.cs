@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.Values;
+using Yarp.ReverseProxy.Configuration;
 
 namespace ApiGateway
 {
@@ -21,7 +22,8 @@ namespace ApiGateway
             //            builder.Configuration.AddJsonFile(Path.Combine("configuration",
             //                                                          "configuration.json"));
             builder.Services.AddCors();
-            builder.Services.AddAuthentication()
+            builder.Services.AddAuthorization((options) => options.AddPolicy("Bearer", policy => policy.RequireClaim("UserId")));
+            builder.Services.AddAuthentication("Bearer")
                     .AddJwtBearer("Bearer", options =>
                     {
                         options.RequireHttpsMetadata = false;
@@ -46,11 +48,14 @@ namespace ApiGateway
 
                         };
                     });
-            builder.Configuration
-                .SetBasePath(builder.Environment.ContentRootPath)
-                .AddOcelot("configuration.json");
-            builder.Services
-                .AddOcelot(builder.Configuration);
+            //builder.Configuration
+            //    .SetBasePath(builder.Environment.ContentRootPath)
+            //    .AddOcelot("configuration.json");
+            //builder.Services
+            //    .AddOcelot(builder.Configuration);
+
+            builder.Services.AddReverseProxy().LoadFromMemory(YARPConfig.Routes, YARPConfig.Clusters);
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -62,13 +67,7 @@ namespace ApiGateway
             app.UseCors(options => options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseOcelot((config) =>
-            {
-                config.AuthenticationMiddleware = async (context, next) =>
-                {
-                    await next.Invoke();
-                };
-            }).Wait();
+            app.MapReverseProxy();
             
             app.Run();
         }

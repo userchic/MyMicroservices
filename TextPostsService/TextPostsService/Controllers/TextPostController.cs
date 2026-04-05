@@ -28,8 +28,7 @@ namespace TextPostsService.Controllers
             var validationResult = createPostValidator.Validate(request);
             if (validationResult.IsValid)
             {
-                string token = HttpContext.Request.Cookies.FirstOrDefault(cookie => cookie.Key == "Authtoken").Value;
-                var userId = GetUserIdFromToken(DecipherToken(token));
+                var userId = GetUserId();
 
                 if (userId.HasValue)
                 {
@@ -44,14 +43,12 @@ namespace TextPostsService.Controllers
             }
             return Json(new { errors = validationResult.Errors });
         }
-        [HttpDelete]
+        [HttpDelete()]
         public async Task<IActionResult> DeletePost(int id)
         {
             if (id>-1)
             {
-                string token = HttpContext.Request.Cookies.FirstOrDefault(cookie => cookie.Key == "Authtoken").Value;
-                var userId = GetUserIdFromToken(DecipherToken(token));
-
+                var userId = GetUserId();
                 if (userId.HasValue)
                 {
                     var result = await postService.DeletePost(id, userId.Value);
@@ -71,8 +68,7 @@ namespace TextPostsService.Controllers
             var validationResult = updatePostValidator.Validate(request);
             if (validationResult.IsValid)
             {
-                string token = HttpContext.Request.Cookies.FirstOrDefault(cookie => cookie.Key == "Authtoken").Value;
-                var userId = GetUserIdFromToken(DecipherToken(token));
+                var userId = GetUserId();
 
                 if (userId.HasValue)
                 {
@@ -113,6 +109,11 @@ namespace TextPostsService.Controllers
             }
             var result = await postService.GetUserPostsPage(page, userId);
             return Json(result);
+        }
+        private int? GetUserId()
+        {
+            string token = HttpContext.Request.Headers.FirstOrDefault(header => header.Key == "myauth").Value;
+            return GetUserIdFromToken(DecipherToken(token));
         }
         private JwtSecurityToken DecipherToken(string token)
         {
