@@ -186,8 +186,10 @@
   }
 }
 
-.post {
+.block {
+  display: block;
   border: 5px solid gray;
-  padding: 30px;
+  padding: 20px;
   border-radius: 30px;
+  margin: 10px
 }

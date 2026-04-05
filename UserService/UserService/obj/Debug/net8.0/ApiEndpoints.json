@@ -33,6 +33,37 @@
   },
   {
     "ContainingType": "AuthService.Controllers.UserController",
+    "Method": "GetProfiles",
+    "RelativePath": "User/GetProfiles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "surname",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fatname",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.Controllers.UserController",
     "Method": "Login",
     "RelativePath": "User/Login",
     "HttpMethod": "POST",

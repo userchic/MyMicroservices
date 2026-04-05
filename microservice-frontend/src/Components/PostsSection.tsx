@@ -74,15 +74,20 @@ export default function PostsSection({ ProfileId, IsProfileOwner }: Props) {
     }
     return (
         <>
-            <TextArea cols={100} rows={2} value={NewPostText} onChange={(event) => setNewPostText(event.target.value)} />
-            <input type="button" onClick={CreatePost} value="Опубликовать" /><br />
+            {IsProfileOwner ?
+                <>
+                    <TextArea cols={100} rows={2} value={NewPostText} onChange={(event) => setNewPostText(event.target.value)} />
+                    <input type="button" onClick={CreatePost} value="Опубликовать" /><br />
+                </> : null}
             {Message}
             <h3>Посты</h3>
             {IsFirstPostsLoaded ?
                 Posts.map((post) => {
                     return (
                         <>
-                            <PostInfo deletePost={DeletePost} updatePost={UpdatePost} post={post} />
+                            <div className="block">
+                                <PostInfo deletePost={DeletePost} updatePost={UpdatePost} post={post} isOwned={IsProfileOwner} />
+                            </div>
                         </>
                     )
                 })

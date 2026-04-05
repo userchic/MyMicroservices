@@ -5,29 +5,30 @@ import type { ModeType } from "antd/es/color-picker/interface"
 interface Props {
     post: Post,
     deletePost: (id: number) => void
-    updatePost: (Text: string, id: number) => void
+    updatePost: (Text: string, id: number) => void,
+    isOwned: boolean
 }
 enum Mode {
     Update,
     Read
 }
 
-export default function PostInfo({ deletePost, updatePost, post: post }: Props) {
+export default function PostInfo({ deletePost, updatePost, post: post, isOwned }: Props) {
 
     const [Text, setText] = useState(post.text)
     const [State, setState] = useState<Mode>(Mode.Read)
     function changeMode() {
-        if (State == Mode.Read) setState(Mode.Update)
-        else {
-            setState(Mode.Read)
-            setText(post.text)
+        if (isOwned) {
+            if (State == Mode.Read) setState(Mode.Update)
+            else {
+                setState(Mode.Read)
+                setText(post.text)
+            }
         }
     }
     return (
         <>
             <div className="post">
-                Опубликовано: {new Date(post.postTime).toLocaleDateString() + " " + new Date(post.postTime).toLocaleTimeString()}<input type="button" style={{ float: "right" }} value="X" onClick={() => deletePost(post.id)} /><input type="button" style={{ float: "right" }} value="Edit" onClick={changeMode} />
-                <br />
                 Сообщение:
                 {
                     State == Mode.Read ? Text :
@@ -39,7 +40,15 @@ export default function PostInfo({ deletePost, updatePost, post: post }: Props) 
                                 setState(Mode.Read)
                             }} value="Подтвердить" />
                         </>
-                }
+                }<div style={{ float: "right" }}>
+                    Опубликовано: {new Date(post.postTime).toLocaleDateString() + " " + new Date(post.postTime).toLocaleTimeString()}
+                    {isOwned ?
+                        <>
+                            <input type="button" value="Edit" onClick={changeMode} />
+                            <input type="button" value="X" onClick={() => deletePost(post.id)} />
+                        </> : null}</div>
+
+
             </div>
         </>
     )

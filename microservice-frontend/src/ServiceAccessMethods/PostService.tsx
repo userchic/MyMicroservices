@@ -8,7 +8,7 @@ function GetToken(): string | undefined {
     })?.slice(10)
     return tokenCookie
 }
-export async function RequestCreatePost(Text: string) {
+export async function RequestCreatePost(text: string) {
     let request = requestBase + "CreatePost"
     let res = await fetch(request, {
         method: "POST",
@@ -17,7 +17,7 @@ export async function RequestCreatePost(Text: string) {
             "Content-Type": "application/json",
             "MyAuth": `${GetToken()}`,
         },
-        body: JSON.stringify({ Text: Text })
+        body: JSON.stringify({ Text: text })
     })
     return await res.json()
 }
@@ -34,7 +34,7 @@ export async function RequestDeletePost(id: number) {
     })
     return await res.json()
 }
-export async function RequestUpdatePost(Id: number, Text: string) {
+export async function RequestUpdatePost(id: number, text: string) {
     let request = requestBase + "UpdatePost"
     let res = await fetch(request, {
         method: "Put",
@@ -43,7 +43,7 @@ export async function RequestUpdatePost(Id: number, Text: string) {
             "Content-Type": "application/json",
             "MyAuth": `${GetToken()}`,
         },
-        body: JSON.stringify({ Text: Text, Id: Id })
+        body: JSON.stringify({ Text: text, Id: id })
     })
     return await res.json()
 }

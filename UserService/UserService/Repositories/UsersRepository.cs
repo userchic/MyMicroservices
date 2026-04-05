@@ -31,5 +31,19 @@ namespace AuthService.Repositories
         {
             await _context.SaveChangesAsync();
         }
+
+        public async Task<ICollection<User>> GetFiltered(string? login, string? name, string? surname, string? fatname)
+        {
+            IQueryable<User> query = _context.Users.AsQueryable();
+            if (login is not null)
+                query=query.Where(user => user.Login.Contains(login));
+            if (name is not null)
+                query = query.Where(user => user.Name.Contains(name));
+            if (surname is not null)
+                query = query.Where(user => user.Surname.Contains(surname));
+            if (fatname is not null)
+                query = query.Where(user => user.Fatname.Contains(fatname));
+            return await query.ToListAsync();
+        }
     }
 }

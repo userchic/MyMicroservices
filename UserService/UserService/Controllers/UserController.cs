@@ -79,6 +79,11 @@ namespace AuthService.Controllers
             else
                 return Json(new { error = loginResult.Error });
         }
+        [HttpGet]
+        public async Task<IActionResult> GetProfiles(string? login, string? name, string? surname, string? fatname)
+        {
+            return Json(await _userService.GetProfiles(login, name, surname, fatname));
+        }
         [Authorize]
         [HttpPut]
         public async Task<IActionResult> ChangeProfile(ChangeProfileRequest request)

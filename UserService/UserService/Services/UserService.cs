@@ -42,6 +42,11 @@ namespace AuthService.Services
 
         }
 
+        public async Task<ICollection<User>> GetProfiles(string? login, string? name, string? surname, string? fatname)
+        {
+            return await _userRep.GetFiltered(login, name, surname, fatname);
+        }
+
         public async Task<Result<User, string>> Login(LoginRequest request)
         {
             var user = await _userRep.Get(request.Login);

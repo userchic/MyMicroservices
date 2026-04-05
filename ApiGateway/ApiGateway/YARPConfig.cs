@@ -40,6 +40,16 @@ namespace ApiGateway
             },
             new RouteConfig()
             {
+                RouteId="GetProfiles",
+                ClusterId="User",
+                Match=new RouteMatch()
+                {
+                    Path ="/User/GetProfiles",
+                    Methods=new List<string>() { "Get" },
+                }
+            },
+            new RouteConfig()
+            {
                 RouteId="ChangeProfile",
                 ClusterId="User",
                 Match=new RouteMatch()
