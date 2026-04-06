@@ -1,6 +1,7 @@
 import { useState } from "react"
 import type { Post } from "../Models/Post"
 import type { ModeType } from "antd/es/color-picker/interface"
+import TextArea from "antd/es/input/TextArea"
 
 interface Props {
     post: Post,
@@ -28,27 +29,26 @@ export default function PostInfo({ deletePost, updatePost, post: post, isOwned }
     }
     return (
         <>
-            <div className="post">
-                Сообщение:
+            <div style={{ display: "inline-block" }}>
                 {
-                    State == Mode.Read ? Text :
+                    State == Mode.Read ? <div style={{ whiteSpace: "pre", display: "inline-block" }}>{Text}</div> :
                         <>
-                            <input type="text" value={Text} onChange={(event) => setText(event.target.value)} />
+                            <TextArea cols={100} rows={3} value={Text} onChange={(event) => setText(event.target.value)} />
                             <br />
                             <input type="button" onClick={() => {
                                 updatePost(Text, post.id)
                                 setState(Mode.Read)
                             }} value="Подтвердить" />
                         </>
-                }<div style={{ float: "right" }}>
-                    Опубликовано: {new Date(post.postTime).toLocaleDateString() + " " + new Date(post.postTime).toLocaleTimeString()}
-                    {isOwned ?
-                        <>
-                            <input type="button" value="Edit" onClick={changeMode} />
-                            <input type="button" value="X" onClick={() => deletePost(post.id)} />
-                        </> : null}</div>
-
-
+                }
+            </div>
+            <div style={{ float: "right" }}>
+                Опубликовано: {new Date(post.postTime).toLocaleDateString() + " " + new Date(post.postTime).toLocaleTimeString()}
+                {isOwned ?
+                    <>
+                        <input type="button" value="Edit" onClick={changeMode} />
+                        <input type="button" value="X" onClick={() => deletePost(post.id)} />
+                    </> : null}
             </div>
         </>
     )

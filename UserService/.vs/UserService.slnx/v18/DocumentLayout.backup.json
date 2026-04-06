@@ -78,8 +78,7 @@
               "RelativeToolTip": "UserService\\Abstractions\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T10:54:36.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-05T10:54:36.032Z"
             },
             {
               "$type": "Document",
@@ -91,8 +90,7 @@
               "RelativeToolTip": "UserService\\Repositories\\UsersRepository.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAIwCwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T06:41:36.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T06:41:36.694Z"
             },
             {
               "$type": "Document",
@@ -102,7 +100,7 @@
               "RelativeDocumentMoniker": "UserService\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Controllers\\UserController.cs",
               "RelativeToolTip": "UserService\\Controllers\\UserController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAwwFMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAwwFYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T13:51:43.868Z",
               "EditorCaption": ""
@@ -117,8 +115,7 @@
               "RelativeToolTip": "UserService\\Abstractions\\IUserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T10:55:51.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-05T10:55:51.64Z"
             },
             {
               "$type": "Document",
@@ -130,8 +127,7 @@
               "RelativeToolTip": "UserService\\Services\\UserService.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAowC4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T10:55:30.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-05T10:55:30.697Z"
             },
             {
               "$type": "Document",
