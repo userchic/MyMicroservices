@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { User } from "../Models/User";
-import { RequestGetFiltered } from "../ServiceAccessMethods/UserService";
+import { RequestGetProfiles } from "../ServiceAccessMethods/UserService";
 import Profile from "./Profile";
 import { Link } from "react-router";
 
@@ -13,9 +13,9 @@ export default function ProfilesSection() {
     const [Message, setMessage] = useState("")
 
     const [Profiles, setProfiles] = useState<User[]>([])
-    useEffect(() => Search())
+    useEffect(() => Search(), [])
     function Search() {
-        RequestGetFiltered(Login, Name, Surname, Fatname).then((body) => {
+        RequestGetProfiles(Login, Name, Surname, Fatname).then((body) => {
             setProfiles(body)
             if (body.length == 0)
                 setMessage("Нет таких профилей ")

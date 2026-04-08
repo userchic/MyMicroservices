@@ -1,5 +1,6 @@
 ﻿using System.Collections.Immutable;
 using Yarp.ReverseProxy.Configuration;
+using Yarp.ReverseProxy.LoadBalancing;
 using static System.Net.WebRequestMethods;
 
 namespace ApiGateway
@@ -31,7 +32,7 @@ namespace ApiGateway
             new RouteConfig()
             {
                 RouteId="GetProfile",
-                ClusterId="User",
+                ClusterId="User",                
                 Match=new RouteMatch()
                 {
                     Path ="/User/GetProfile",
@@ -119,13 +120,14 @@ namespace ApiGateway
             new ClusterConfig()
             {
                 ClusterId="User",
+                LoadBalancingPolicy=LoadBalancingPolicies.Random,
                 Destinations=new Dictionary<string, DestinationConfig>()
                 {
                     {
                         "destination1",new DestinationConfig()
                         {
-                            Address="http://localhost:5034"
-                        }
+                            Address="http://localhost:5035"
+                        } 
                     }
                 }
             },
@@ -135,7 +137,7 @@ namespace ApiGateway
                 Destinations=new Dictionary<string, DestinationConfig>()
                 {
                     {
-                        "destination2",new DestinationConfig()
+                        "destination1",new DestinationConfig()
                         {
                             Address="http://localhost:5164"
                         }

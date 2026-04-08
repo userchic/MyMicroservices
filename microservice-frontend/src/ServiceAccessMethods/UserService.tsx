@@ -64,7 +64,7 @@ export async function RequestGetProfile(login: string) {
     })
     return await res.json()
 }
-export async function RequestGetFiltered(login?: string, name?: string, surname?: string, fatname?: string) {
+export async function RequestGetProfiles(login?: string, name?: string, surname?: string, fatname?: string) {
     let request = requestBase + "GetProfiles" + "?"
     if (login !== "")
         request += "login=" + login + "&"
