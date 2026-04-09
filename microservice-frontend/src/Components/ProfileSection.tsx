@@ -28,7 +28,7 @@ export default function ProfileSection() {
             <h2>Профиль</h2>
             {IsProfileLoaded ?
                 <>
-                    <Profile User={User} />
+                    <Profile User={User} IsProfileOwner={IsProfileOwner} />
                     <PostsSection IsProfileOwner={IsProfileOwner} ProfileId={User.id} />
                 </>
                 : "Профиль загружается"}

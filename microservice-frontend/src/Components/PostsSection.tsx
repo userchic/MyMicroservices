@@ -41,8 +41,10 @@ export default function PostsSection({ ProfileId, IsProfileOwner }: Props) {
             else if (body.errors !== undefined)
                 setMessage(body.errors[0])
             else {
-                setPosts([body].concat(Posts))
+                let newPostList = [...[body].concat(Posts)]
+                setPosts(newPostList)
                 setNewPostText("")
+                setIsFirstPostsLoaded(true)
             }
 
         })
@@ -54,6 +56,7 @@ export default function PostsSection({ ProfileId, IsProfileOwner }: Props) {
             }
             else {
                 setPosts(Posts.filter((post) => post.id !== id))
+                setIsFirstPostsLoaded(true)
             }
         })
     }
@@ -70,6 +73,7 @@ export default function PostsSection({ ProfileId, IsProfileOwner }: Props) {
                 updatedPost.text = body.text
                 return currentPosts
             })
+            setIsFirstPostsLoaded(true)
         })
     }
     return (
@@ -82,15 +86,19 @@ export default function PostsSection({ ProfileId, IsProfileOwner }: Props) {
             {Message}
             <h3>Посты</h3>
             {IsFirstPostsLoaded ?
-                Posts.map((post) => {
-                    return (
-                        <>
-                            <div className="block">
-                                <PostInfo deletePost={DeletePost} updatePost={UpdatePost} post={post} isOwned={IsProfileOwner} />
-                            </div>
-                        </>
-                    )
-                })
+                <>
+                    {
+                        Posts.map((post) => {
+                            return (
+                                <>
+                                    <div key={post.id} className="block">
+                                        <PostInfo deletePost={DeletePost} updatePost={UpdatePost} post={post} isOwned={IsProfileOwner} />
+                                    </div>
+                                </>
+                            )
+                        })
+                    }
+                </>
                 : "Посты загружаются"
             }
             {

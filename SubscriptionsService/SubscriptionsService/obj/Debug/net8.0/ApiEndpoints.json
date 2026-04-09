@@ -1,0 +1,82 @@
+[
+  {
+    "ContainingType": "SubscriptionsService.Controllers.SubscriptionsController",
+    "Method": "GetIsSubscribed",
+    "RelativePath": "Subscriptions/GetIsSubscribed",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "targetUserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SubscriptionsService.Controllers.SubscriptionsController",
+    "Method": "GetSubscribers",
+    "RelativePath": "Subscriptions/GetSubscribers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SubscriptionsService.Controllers.SubscriptionsController",
+    "Method": "GetSubscriptions",
+    "RelativePath": "Subscriptions/GetSubscriptions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SubscriptionsService.Controllers.SubscriptionsController",
+    "Method": "Subscribe",
+    "RelativePath": "Subscriptions/Subscribe",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "targetId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SubscriptionsService.Controllers.SubscriptionsController",
+    "Method": "Unsubscribe",
+    "RelativePath": "Subscriptions/Unsubscribe",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "targetId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

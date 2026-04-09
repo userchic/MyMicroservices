@@ -1,13 +1,10 @@
-import { GatewayUrl } from "./HostName"
+
+import { CheckAuthorization, GatewayUrl, GetToken } from "./HostName"
 
 let controllerName = "TextPost"
 let requestBase = `${GatewayUrl}/${controllerName}/`
-function GetToken(): string | undefined {
-    let tokenCookie = document.cookie.split(" ").find((cookie) => {
-        return cookie.startsWith("Authtoken=")
-    })?.slice(10)
-    return tokenCookie
-}
+
+
 export async function RequestCreatePost(text: string) {
     let request = requestBase + "CreatePost"
     let res = await fetch(request, {
@@ -19,6 +16,7 @@ export async function RequestCreatePost(text: string) {
         },
         body: JSON.stringify({ Text: text })
     })
+    CheckAuthorization(res)
     return await res.json()
 }
 export async function RequestDeletePost(id: number) {
@@ -32,6 +30,7 @@ export async function RequestDeletePost(id: number) {
         },
         body: JSON.stringify({ Text: Text })
     })
+    CheckAuthorization(res)
     return await res.json()
 }
 export async function RequestUpdatePost(id: number, text: string) {
@@ -45,6 +44,7 @@ export async function RequestUpdatePost(id: number, text: string) {
         },
         body: JSON.stringify({ Text: text, Id: id })
     })
+    CheckAuthorization(res)
     return await res.json()
 }
 export async function RequestGetPost(id: number) {
@@ -56,6 +56,7 @@ export async function RequestGetPost(id: number) {
             "MyAuth": `${GetToken()}`,
         }
     })
+    CheckAuthorization(res)
     return await res.json()
 }
 export async function RequestGetUserPostsPage(page: number, userId: number) {
@@ -67,5 +68,6 @@ export async function RequestGetUserPostsPage(page: number, userId: number) {
             "MyAuth": `${GetToken()}`,
         }
     })
+    CheckAuthorization(res)
     return await res.json()
 }

@@ -112,7 +112,7 @@ namespace TextPostsService.Controllers
         }
         private int? GetUserId()
         {
-            string token = HttpContext.Request.Headers.FirstOrDefault(header => header.Key == "myauth").Value;
+            string token = HttpContext.Request.Headers.FirstOrDefault(header => header.Key == "MyAuth").Value;
             return GetUserIdFromToken(DecipherToken(token));
         }
         private JwtSecurityToken DecipherToken(string token)
@@ -127,11 +127,11 @@ namespace TextPostsService.Controllers
             {
                 return int.Parse(token.Claims.FirstOrDefault(claim => claim.Type == "UserId").Value);
             }
-            catch 
+            catch
             {
                 logger.LogError("Кажется получен некорректный userId или его нет");
+                return null;
             }
-            return null;
         }
     }
 }

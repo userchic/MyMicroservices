@@ -22,16 +22,20 @@ namespace AuthService.Controllers
         IValidator<LoginRequest> loginValidator;
         IValidator<RegistryRequest> registryValidator;
         IValidator<ChangeProfileRequest> changeProfileValidator;
-        public UserController(IUserService userservice, IValidator<LoginRequest> loginvalidator, IValidator<RegistryRequest> registryvalidator, IValidator<ChangeProfileRequest> changeprofilevalidator)
+        ILogger logger;
+        public UserController(IUserService userservice, IValidator<LoginRequest> loginvalidator, IValidator<RegistryRequest> registryvalidator, IValidator<ChangeProfileRequest> changeprofilevalidator,
+            ILogger<UserController> logger)
         {
             _userService = userservice;
             loginValidator = loginvalidator;
             registryValidator = registryvalidator;
             changeProfileValidator = changeprofilevalidator;
+            this.logger = logger;
         }
         [HttpPost]
         public async Task<IActionResult> Login(LoginRequest request)
         {
+            logger.LogInformation("Я работаю");
             var result = await loginValidator.ValidateAsync(request);
             if (result.IsValid)
             {

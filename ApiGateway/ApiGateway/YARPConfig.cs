@@ -114,6 +114,60 @@ namespace ApiGateway
                 },
                 AuthorizationPolicy="Bearer"
             },
+            new RouteConfig()
+            {
+                RouteId="GetSubscriptions",
+                ClusterId="Subscriptions",
+                Match=new RouteMatch()
+                {
+                    Path ="/Subscriptions/GetSubscriptions",
+                    Methods=new List<string>() { "Get" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="GetIsSubscribed",
+                ClusterId="Subscriptions",
+                Match=new RouteMatch()
+                {
+                    Path ="/Subscriptions/GetIsSubscribed",
+                    Methods=new List<string>() { "Get" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="GetSubscribers",
+                ClusterId="Subscriptions",
+                Match=new RouteMatch()
+                {
+                    Path ="/Subscriptions/GetSubscribers",
+                    Methods=new List<string>() { "Get" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="Unsubscribe",
+                ClusterId="Subscriptions",
+                Match=new RouteMatch()
+                {
+                    Path ="/Subscriptions/Unsubscribe",
+                    Methods=new List<string>() { "Post" },
+                },
+                AuthorizationPolicy="Bearer"
+            },new RouteConfig()
+            {
+                RouteId="Subscribe",
+                ClusterId="Subscriptions",
+                Match=new RouteMatch()
+                {
+                    Path ="/Subscriptions/Subscribe",
+                    Methods=new List<string>() { "Post" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
         };
         public static IReadOnlyList<ClusterConfig> Clusters = new List<ClusterConfig>()
         {
@@ -128,6 +182,20 @@ namespace ApiGateway
                         {
                             Address="http://localhost:5035"
                         } 
+                    }
+                }
+            },
+            new ClusterConfig()
+            {
+                ClusterId="Subscriptions",
+                LoadBalancingPolicy=LoadBalancingPolicies.Random,
+                Destinations=new Dictionary<string, DestinationConfig>()
+                {
+                    {
+                        "destination1",new DestinationConfig()
+                        {
+                            Address="http://localhost:5198"
+                        }
                     }
                 }
             },
