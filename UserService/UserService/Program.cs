@@ -55,7 +55,7 @@ builder.Services.AddScoped<IValidator<ChangeProfileRequest>, ChangeProfileReques
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UsersRepository>();
 
-
+builder.Services.AddMemoryCache();
 
 var app = builder.Build();
 

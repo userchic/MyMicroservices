@@ -6,6 +6,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -23,14 +24,16 @@ namespace AuthService.Controllers
         IValidator<RegistryRequest> registryValidator;
         IValidator<ChangeProfileRequest> changeProfileValidator;
         ILogger logger;
+        IMemoryCache usersCache;
         public UserController(IUserService userservice, IValidator<LoginRequest> loginvalidator, IValidator<RegistryRequest> registryvalidator, IValidator<ChangeProfileRequest> changeprofilevalidator,
-            ILogger<UserController> logger)
+            ILogger<UserController> logger,IMemoryCache cache)
         {
             _userService = userservice;
             loginValidator = loginvalidator;
             registryValidator = registryvalidator;
             changeProfileValidator = changeprofilevalidator;
             this.logger = logger;
+            usersCache = cache;
         }
         [HttpPost]
         public async Task<IActionResult> Login(LoginRequest request)
@@ -75,13 +78,23 @@ namespace AuthService.Controllers
             {
                 return Json(new { error = "Логин не введен, введите логин" });
             }
-            var loginResult = await _userService.GetProfile(login);
-            if (loginResult.IsSuccess)
+            User cacheProfile;
+            bool foundInCache=usersCache.TryGetValue(login, out cacheProfile);
+            if (foundInCache)
             {
-                return Json(loginResult.Value);
+                return Json(cacheProfile);
             }
             else
-                return Json(new { error = loginResult.Error });
+            {
+                var loginResult = await _userService.GetProfile(login);
+                if (loginResult.IsSuccess)
+                {
+                    usersCache.Set(login, loginResult.Value,TimeSpan.FromMinutes(5));
+                    return Json(loginResult.Value);
+                }
+                else
+                    return Json(new { error = loginResult.Error });
+            }
         }
         [HttpGet]
         public async Task<IActionResult> GetProfiles(string? login, string? name, string? surname, string? fatname)

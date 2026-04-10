@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { RequestCreatePost, RequestDeletePost, RequestGetUserPostsPage, RequestUpdatePost } from "../ServiceAccessMethods/PostService"
 import { type Post } from "../Models/Post"
 import TextArea from "antd/es/input/TextArea"
-import PostInfo from "./Post"
+import PostInfo from "./PostInfo"
 
 
 interface Props {
