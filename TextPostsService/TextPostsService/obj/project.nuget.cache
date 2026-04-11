@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "+vdppSbAGdE=",
+  "dgSpecHash": "8mxtTZ56cKE=",
   "success": true,
   "projectFilePath": "C:\\Users\\Руслан Габзалилов\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\TextPostsService.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Руслан Габзалилов\\.nuget\\packages\\confluent.kafka\\2.14.0\\confluent.kafka.2.14.0.nupkg.sha512",
     "C:\\Users\\Руслан Габзалилов\\.nuget\\packages\\csharpfunctionalextensions\\3.7.0\\csharpfunctionalextensions.3.7.0.nupkg.sha512",
     "C:\\Users\\Руслан Габзалилов\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
+    "C:\\Users\\Руслан Габзалилов\\.nuget\\packages\\librdkafka.redist\\2.14.0\\librdkafka.redist.2.14.0.nupkg.sha512",
     "C:\\Users\\Руслан Габзалилов\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.25\\microsoft.entityframeworkcore.8.0.25.nupkg.sha512",
     "C:\\Users\\Руслан Габзалилов\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.25\\microsoft.entityframeworkcore.abstractions.8.0.25.nupkg.sha512",
     "C:\\Users\\Руслан Габзалилов\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.25\\microsoft.entityframeworkcore.analyzers.8.0.25.nupkg.sha512",

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
 using TextPostsService.Abstractions;
 using TextPostsService.DTO;
+using TextPostsService.Producer;
 
 namespace TextPostsService.Controllers
 {
@@ -12,15 +13,17 @@ namespace TextPostsService.Controllers
     public class TextPostController : Controller
     {
         ITextPostService postService;
+        IPostProducedMessagerService producer;
         IValidator<CreatePostRequest> createPostValidator;
         IValidator<UpdatePostRequest> updatePostValidator;
         ILogger<TextPostController> logger;
-        public TextPostController(ILogger<TextPostController> logger,ITextPostService postService, IValidator<UpdatePostRequest> updatePostValidator,IValidator<CreatePostRequest> createPostValidator)
+        public TextPostController(ILogger<TextPostController> logger,ITextPostService postService, IValidator<UpdatePostRequest> updatePostValidator,IValidator<CreatePostRequest> createPostValidator, IPostProducedMessagerService producer)
         {
             this.postService = postService;
             this.updatePostValidator = updatePostValidator;
             this.createPostValidator = createPostValidator;
             this.logger = logger;
+            this.producer = producer;
         }
         [HttpPost]
         public async Task<IActionResult> CreatePost(CreatePostRequest request)
@@ -33,8 +36,11 @@ namespace TextPostsService.Controllers
                 if (userId.HasValue)
                 {
                     var result = await postService.CreatePost(request, userId.Value);
-                    if(result.IsSuccess)
-                        return Json(result.Value );
+                    if (result.IsSuccess)
+                    {
+                        producer.SendPostCreatedMessageAsync("postCreated", userId.Value);
+                        return Json(result.Value);
+                    }
                     else
                         return Json(new { error = result.Error });
                 }

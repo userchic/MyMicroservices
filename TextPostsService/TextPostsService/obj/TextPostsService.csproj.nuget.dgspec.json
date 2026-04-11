@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[3.7.0, )"
             },
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.14.0, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[12.1.1, )"
