@@ -97,6 +97,21 @@ namespace AuthService.Controllers
             }
         }
         [HttpGet]
+        public async Task<IActionResult> GetProfileById(int userId)
+        {
+            if (userId<=-1)
+            {
+                return Json(new { error = "Идентификатор не может быть меньше 0" });
+            }
+            var loginResult = await _userService.GetProfile(userId);
+            if (loginResult.IsSuccess)
+            {
+                return Json(loginResult.Value);
+            }
+            else
+                return Json(new { error = loginResult.Error });
+        }
+        [HttpGet]
         public async Task<IActionResult> GetProfiles(string? login, string? name, string? surname, string? fatname)
         {
             return Json(await _userService.GetProfiles(login, name, surname, fatname));

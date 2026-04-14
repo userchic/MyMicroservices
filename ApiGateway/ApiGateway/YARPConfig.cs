@@ -1,4 +1,6 @@
-﻿using System.Collections.Immutable;
+﻿using Microsoft.AspNetCore.Authorization;
+using System.Collections.Immutable;
+using System.Text.RegularExpressions;
 using Yarp.ReverseProxy.Configuration;
 using Yarp.ReverseProxy.LoadBalancing;
 using static System.Net.WebRequestMethods;
@@ -36,6 +38,16 @@ namespace ApiGateway
                 Match=new RouteMatch()
                 {
                     Path ="/User/GetProfile",
+                    Methods=new List<string>() { "Get" },
+                }
+            },
+            new RouteConfig()
+            {
+                RouteId="GetProfileById",
+                ClusterId="User",
+                Match=new RouteMatch()
+                {
+                    Path ="/User/GetProfileById",
                     Methods=new List<string>() { "Get" },
                 }
             },
@@ -157,7 +169,8 @@ namespace ApiGateway
                     Methods=new List<string>() { "Post" },
                 },
                 AuthorizationPolicy="Bearer"
-            },new RouteConfig()
+            },
+            new RouteConfig()
             {
                 RouteId="Subscribe",
                 ClusterId="Subscriptions",
@@ -165,6 +178,50 @@ namespace ApiGateway
                 {
                     Path ="/Subscriptions/Subscribe",
                     Methods=new List<string>() { "Post" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="GetPersonalNotificationsRule",
+                ClusterId="Notifications",
+                Match=new RouteMatch()
+                {
+                    Path ="/PersonalNotifications/GetPersonalNotificationsRule",
+                    Methods=new List<string>() { "Get" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="CreatePersonalNotificationsRules",
+                ClusterId="Notifications",
+                Match=new RouteMatch()
+                {
+                    Path ="/PersonalNotifications/CreatePersonalNotificationsRules",
+                    Methods=new List<string>() { "Post" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="UpdatePersonalNotificationsRules",
+                ClusterId="Notifications",
+                Match=new RouteMatch()
+                {
+                    Path ="/PersonalNotifications/UpdatePersonalNotificationsRules",
+                    Methods=new List<string>() { "Put" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="DeletePersonalNotificationsRules",
+                ClusterId="Notifications",
+                Match=new RouteMatch()
+                {
+                    Path ="/PersonalNotifications/DeletePersonalNotificationsRules",
+                    Methods=new List<string>() { "Delete" },
                 },
                 AuthorizationPolicy="Bearer"
             },
@@ -208,6 +265,19 @@ namespace ApiGateway
                         "destination1",new DestinationConfig()
                         {
                             Address="http://localhost:5164"
+                        }
+                    }
+                }
+            },
+            new ClusterConfig()
+            {
+                ClusterId="Notifications",
+                Destinations=new Dictionary<string, DestinationConfig>()
+                {
+                    {
+                        "destination1",new DestinationConfig()
+                        {
+                            Address="http://localhost:5020"
                         }
                     }
                 }

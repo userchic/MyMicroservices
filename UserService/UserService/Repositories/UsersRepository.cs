@@ -14,7 +14,11 @@ namespace AuthService.Repositories
         }
         public async Task<User?> Get(string login)
         {
-            return await _context.Users.FirstOrDefaultAsync(user=>user.Login==login);
+            return await _context.Users.FirstOrDefaultAsync(user => user.Login == login);
+        }
+        public async Task<User?> Get(int userId)
+        {
+            return await _context.Users.FirstOrDefaultAsync(user => user.Id == userId);
         }
         public async Task<User> Create(User user)
         {

@@ -1,0 +1,223 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\notificationsservice\\notificationsservice\\consumer\\consumerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|solutionrelative:notificationsservice\\consumer\\consumerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\notificationsservice\\notificationsservice\\services\\notificationsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|solutionrelative:notificationsservice\\services\\notificationsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\notificationsservice\\notificationsservice\\notifystrategies\\emailnotifystrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|solutionrelative:notificationsservice\\notifystrategies\\emailnotifystrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\notificationsservice\\notificationsservice\\services\\httpclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|solutionrelative:notificationsservice\\services\\httpclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\notificationsservice\\notificationsservice\\notifystrategies\\defaultnotificationstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|solutionrelative:notificationsservice\\notifystrategies\\defaultnotificationstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\notificationsservice\\notificationsservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|solutionrelative:notificationsservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\notificationsservice\\notificationsservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|solutionrelative:notificationsservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\notificationsservice\\notificationsservice\\controllers\\personalnotificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|solutionrelative:notificationsservice\\controllers\\personalnotificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\notificationsservice\\notificationsservice\\models\\personalnotificationrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|solutionrelative:notificationsservice\\models\\personalnotificationrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\notificationsservice\\notificationsservice\\services\\personalnotificationrulesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|solutionrelative:notificationsservice\\services\\personalnotificationrulesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\notificationsservice\\notificationsservice\\validators\\createnotificationrulerequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|solutionrelative:notificationsservice\\validators\\createnotificationrulerequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\notificationsservice\\notificationsservice\\validators\\updatenotificationrulerequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F902EF7F-AADE-D283-FD76-CE519AC2EB8C}|NotificationsService\\NotificationsService.csproj|solutionrelative:notificationsservice\\validators\\updatenotificationrulerequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailNotifyStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\NotifyStrategies\\EmailNotifyStrategy.cs",
+              "RelativeDocumentMoniker": "NotificationsService\\NotifyStrategies\\EmailNotifyStrategy.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\NotifyStrategies\\EmailNotifyStrategy.cs",
+              "RelativeToolTip": "NotificationsService\\NotifyStrategies\\EmailNotifyStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwAwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T06:56:50.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NotificationsService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Services\\NotificationsService.cs",
+              "RelativeDocumentMoniker": "NotificationsService\\Services\\NotificationsService.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Services\\NotificationsService.cs",
+              "RelativeToolTip": "NotificationsService\\Services\\NotificationsService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T16:44:37.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConsumerService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Consumer\\ConsumerService.cs",
+              "RelativeDocumentMoniker": "NotificationsService\\Consumer\\ConsumerService.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Consumer\\ConsumerService.cs",
+              "RelativeToolTip": "NotificationsService\\Consumer\\ConsumerService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T12:06:01.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Program.cs",
+              "RelativeDocumentMoniker": "NotificationsService\\Program.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Program.cs",
+              "RelativeToolTip": "NotificationsService\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T10:36:04.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PersonalNotificationsController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Controllers\\PersonalNotificationsController.cs",
+              "RelativeDocumentMoniker": "NotificationsService\\Controllers\\PersonalNotificationsController.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Controllers\\PersonalNotificationsController.cs",
+              "RelativeToolTip": "NotificationsService\\Controllers\\PersonalNotificationsController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBYAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T16:45:56.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HttpClientService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Services\\HttpClientService.cs",
+              "RelativeDocumentMoniker": "NotificationsService\\Services\\HttpClientService.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Services\\HttpClientService.cs",
+              "RelativeToolTip": "NotificationsService\\Services\\HttpClientService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAnwBsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T13:33:01.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DefaultNotificationStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\NotifyStrategies\\DefaultNotificationStrategy.cs",
+              "RelativeDocumentMoniker": "NotificationsService\\NotifyStrategies\\DefaultNotificationStrategy.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\NotifyStrategies\\DefaultNotificationStrategy.cs",
+              "RelativeToolTip": "NotificationsService\\NotifyStrategies\\DefaultNotificationStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T06:57:24.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "NotificationsService\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Properties\\launchSettings.json",
+              "RelativeToolTip": "NotificationsService\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-13T10:32:12.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PersonalNotificationRulesService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Services\\PersonalNotificationRulesService.cs",
+              "RelativeDocumentMoniker": "NotificationsService\\Services\\PersonalNotificationRulesService.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Services\\PersonalNotificationRulesService.cs",
+              "RelativeToolTip": "NotificationsService\\Services\\PersonalNotificationRulesService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T11:59:49.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PersonalNotificationRule.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Models\\PersonalNotificationRule.cs",
+              "RelativeDocumentMoniker": "NotificationsService\\Models\\PersonalNotificationRule.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Models\\PersonalNotificationRule.cs",
+              "RelativeToolTip": "NotificationsService\\Models\\PersonalNotificationRule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T10:36:36.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateNotificationRuleRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Validators\\CreateNotificationRuleRequestValidator.cs",
+              "RelativeDocumentMoniker": "NotificationsService\\Validators\\CreateNotificationRuleRequestValidator.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Validators\\CreateNotificationRuleRequestValidator.cs",
+              "RelativeToolTip": "NotificationsService\\Validators\\CreateNotificationRuleRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T18:51:09.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UpdateNotificationRuleRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Validators\\UpdateNotificationRuleRequestValidator.cs",
+              "RelativeDocumentMoniker": "NotificationsService\\Validators\\UpdateNotificationRuleRequestValidator.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\NotificationsService\\NotificationsService\\Validators\\UpdateNotificationRuleRequestValidator.cs",
+              "RelativeToolTip": "NotificationsService\\Validators\\UpdateNotificationRuleRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T11:46:08.204Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

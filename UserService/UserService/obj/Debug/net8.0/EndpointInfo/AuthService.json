@@ -88,6 +88,28 @@
         }
       }
     },
+    "/User/GetProfileById": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/User/GetProfiles": {
       "get": {
         "tags": [
@@ -187,9 +209,13 @@
             "type": "string",
             "nullable": true
           },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
           "birthday": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
           }
         },
         "additionalProperties": false
@@ -231,9 +257,13 @@
             "type": "string",
             "nullable": true
           },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
           "birthday": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
           }
         },
         "additionalProperties": false

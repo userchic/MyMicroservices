@@ -80,6 +80,7 @@ export default function PostsSection({ ProfileId, IsProfileOwner }: Props) {
         <>
             {IsProfileOwner ?
                 <>
+                    <h3>Напишите новый пост</h3>
                     <TextArea cols={100} rows={2} value={NewPostText} onChange={(event) => setNewPostText(event.target.value)} />
                     <input type="button" onClick={CreatePost} value="Опубликовать" /><br />
                 </> : null}

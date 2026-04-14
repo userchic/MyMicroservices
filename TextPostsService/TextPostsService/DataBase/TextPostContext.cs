@@ -7,6 +7,7 @@ namespace TextPostsService.DataBase
     {
         public TextPostContext(DbContextOptions<TextPostContext> options) : base(options)
         {
+            //Database.EnsureDeleted();
             bool isCreated = Database.EnsureCreated();
         }
         public DbSet<TextPost> Posts { get; set; }

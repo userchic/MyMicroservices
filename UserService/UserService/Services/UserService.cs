@@ -29,7 +29,7 @@ namespace AuthService.Services
             getUserResult.Name = updatedUser.Name;
             getUserResult.Surname = updatedUser.Surname;
             getUserResult.Fatname = updatedUser.Fatname;
-            getUserResult.Birthday = updatedUser.Birthday.ToUniversalTime();
+            getUserResult.Birthday = updatedUser.Birthday;
             _userRep.Update(getUserResult);
             await _userRep.Save();
             return updatedUser;
@@ -40,6 +40,12 @@ namespace AuthService.Services
             var user = await _userRep.Get(login);
             return user.ToResult("Не найден пользователь с таким логином.");
 
+        }
+
+        public async Task<Result<User, string>> GetProfile(int userId)
+        {
+            var user = await _userRep.Get(userId);
+            return user.ToResult("Не найден пользователь с таким идентификатором.");
         }
 
         public async Task<ICollection<User>> GetProfiles(string? login, string? name, string? surname, string? fatname)

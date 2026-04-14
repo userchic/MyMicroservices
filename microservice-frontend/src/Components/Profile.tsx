@@ -52,6 +52,14 @@ export default function Profile({ User }: Props) {
                     </tr>
                     <tr>
                         <td>
+                            Email:
+                        </td>
+                        <td>
+                            {User?.email}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             Логин:
                         </td>
                         <td>

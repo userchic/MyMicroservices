@@ -1,0 +1,80 @@
+[
+  {
+    "ContainingType": "NotificationsService.Controllers.ConsumerController",
+    "Method": "StartConsuming",
+    "RelativePath": "Consumer/StartConsuming",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "partition",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NotificationsService.Controllers.ConsumerController",
+    "Method": "StopConsuming",
+    "RelativePath": "Consumer/StopConsuming",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NotificationsService.Controllers.PersonalNotificationsController",
+    "Method": "CreatePersonalNotificationsRules",
+    "RelativePath": "PersonalNotifications/CreatePersonalNotificationsRules",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "NotificationsService.DTO.CreateNotificationRulesRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NotificationsService.Controllers.PersonalNotificationsController",
+    "Method": "DeletePersonalNotificationsRules",
+    "RelativePath": "PersonalNotifications/DeletePersonalNotificationsRules",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NotificationsService.Controllers.PersonalNotificationsController",
+    "Method": "GetPersonalNotificationsRule",
+    "RelativePath": "PersonalNotifications/GetPersonalNotificationsRule",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NotificationsService.Controllers.PersonalNotificationsController",
+    "Method": "UpdatePersonalNotificationsRules",
+    "RelativePath": "PersonalNotifications/UpdatePersonalNotificationsRules",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "NotificationsService.DTO.UpdateNotificationRulesRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -3,56 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\database\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\database\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\abstractions\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\abstractions\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\abstractions\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\abstractions\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\validators\\changeprofilerequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\validators\\changeprofilerequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\validators\\registryrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\validators\\registryrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\abstractions\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\abstractions\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,164 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserContext.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\DataBase\\UserContext.cs",
-              "RelativeDocumentMoniker": "UserService\\DataBase\\UserContext.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\DataBase\\UserContext.cs",
-              "RelativeToolTip": "UserService\\DataBase\\UserContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T06:53:19.405Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Program.cs",
               "RelativeDocumentMoniker": "UserService\\Program.cs",
               "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Program.cs",
               "RelativeToolTip": "UserService\\Program.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAvwDkAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T06:31:55.354Z"
+              "WhenOpened": "2026-04-13T11:42:11.223Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "UserService\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Controllers\\UserController.cs",
               "RelativeToolTip": "UserService\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAADwv3oAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAYwEsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T13:51:43.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\appsettings.json",
-              "RelativeDocumentMoniker": "UserService\\appsettings.json",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\appsettings.json",
-              "RelativeToolTip": "UserService\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-01T06:39:40.936Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsersRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Repositories\\UsersRepository.cs",
-              "RelativeDocumentMoniker": "UserService\\Repositories\\UsersRepository.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Repositories\\UsersRepository.cs",
-              "RelativeToolTip": "UserService\\Repositories\\UsersRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T06:41:36.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "UserService\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Properties\\launchSettings.json",
-              "RelativeToolTip": "UserService\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-02T07:46:17.646Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "UserService\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Services\\UserService.cs",
-              "RelativeToolTip": "UserService\\Services\\UserService.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAwwC4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T10:55:30.697Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Abstractions\\IUserService.cs",
-              "RelativeDocumentMoniker": "UserService\\Abstractions\\IUserService.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Abstractions\\IUserService.cs",
-              "RelativeToolTip": "UserService\\Abstractions\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T10:54:36.032Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Abstractions\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "UserService\\Abstractions\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Abstractions\\IUserRepository.cs",
-              "RelativeToolTip": "UserService\\Abstractions\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAABrAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T10:55:51.64Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Models\\User.cs",
-              "RelativeDocumentMoniker": "UserService\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Models\\User.cs",
-              "RelativeToolTip": "UserService\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T06:50:59.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ChangeProfileRequestValidator.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Validators\\ChangeProfileRequestValidator.cs",
-              "RelativeDocumentMoniker": "UserService\\Validators\\ChangeProfileRequestValidator.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Validators\\ChangeProfileRequestValidator.cs",
-              "RelativeToolTip": "UserService\\Validators\\ChangeProfileRequestValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAWwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T05:31:44.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RegistryRequestValidator.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Validators\\RegistryRequestValidator.cs",
-              "RelativeDocumentMoniker": "UserService\\Validators\\RegistryRequestValidator.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Validators\\RegistryRequestValidator.cs",
-              "RelativeToolTip": "UserService\\Validators\\RegistryRequestValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAB8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T05:32:39.965Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Abstractions\\IRepository.cs",
-              "RelativeDocumentMoniker": "UserService\\Abstractions\\IRepository.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Abstractions\\IRepository.cs",
-              "RelativeToolTip": "UserService\\Abstractions\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T13:03:23.725Z"
+              "WhenOpened": "2026-04-01T13:51:43.868Z"
             }
           ]
         }

@@ -9,7 +9,7 @@ export function GetToken(): string | undefined {
     return tokenCookie
 }
 export function CheckAuthorization(response: Response) {
-    if (response.status == 401) {
+    if (response.status == 401 && store.getState().Auth.login !== "") {
         store.dispatch(signOut())
         alert("Срок аутентификации истек")
     }

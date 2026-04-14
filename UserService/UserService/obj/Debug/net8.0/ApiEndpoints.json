@@ -33,6 +33,22 @@
   },
   {
     "ContainingType": "AuthService.Controllers.UserController",
+    "Method": "GetProfileById",
+    "RelativePath": "User/GetProfileById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.Controllers.UserController",
     "Method": "GetProfiles",
     "RelativePath": "User/GetProfiles",
     "HttpMethod": "GET",

@@ -5,6 +5,7 @@ import type { User } from "../Models/User";
 import { RequestGetProfile } from "../ServiceAccessMethods/UserService";
 import PostsSection from "./PostsSection";
 import Profile from "./Profile";
+import NotificationRuleInfo from "./NotificationRuleInfo";
 
 export default function ProfileSection() {
     const params = useParams()
@@ -29,7 +30,14 @@ export default function ProfileSection() {
             {IsProfileLoaded ?
                 <>
                     <div className="block">
-                        <Profile User={User} IsProfileOwner={IsProfileOwner} />
+                        <div style={{ display: "flex" }}>
+                            <div style={{ flex: "0.5" }}>
+                                <Profile User={User} IsProfileOwner={IsProfileOwner} />
+                            </div>
+                            <div style={{ flex: "0.5" }}>
+                                <NotificationRuleInfo />
+                            </div>
+                        </div>
                     </div>
                     <PostsSection IsProfileOwner={IsProfileOwner} ProfileId={User.id} />
                 </>

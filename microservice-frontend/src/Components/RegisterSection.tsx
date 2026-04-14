@@ -9,10 +9,11 @@ export default function RegisterSection() {
     const [Surname, setSurname] = useState("")
     const [Fatname, setFatname] = useState("")
     const [Birthday, setBirthday] = useState("")
+    const [Email, setEmail] = useState("")
 
     const [Message, setMessage] = useState("")
     function ExecuteRegistry() {
-        RequestRegister(Login, Password, Name, Surname, Fatname, Birthday !== "" ? new Date(Birthday) : new Date()).then(
+        RequestRegister(Login, Password, Name, Surname, Fatname, Birthday !== "" ? new Date(Birthday) : new Date(), Email).then(
             (body) => {
                 if (body.error !== undefined)
                     setMessage(body.error)
@@ -75,10 +76,18 @@ export default function RegisterSection() {
                     </tr>
                     <tr>
                         <td>
+                            Почта
+                        </td>
+                        <td>
+                            <input type="email" value={Email} onChange={(event) => setEmail(event.target.value)} />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             День рождения
                         </td>
                         <td>
-                            <input type="datetime-local" value={Birthday} onChange={(event) => setBirthday(event.target.value)} />
+                            <input type="date" value={Birthday} onChange={(event) => setBirthday(event.target.value)} />
                         </td>
                     </tr>
                 </tbody>

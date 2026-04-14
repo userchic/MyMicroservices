@@ -5,5 +5,6 @@ export interface User {
     name: string,
     surname: string,
     fatname: string,
-    birthday: Date
+    email: Date,
+    birthday: Date,
 }

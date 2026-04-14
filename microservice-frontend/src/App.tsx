@@ -10,6 +10,7 @@ import LoginSection from './Components/LoginSection'
 import RegisterSection from './Components/RegisterSection'
 import ProfileSection from './Components/ProfileSection'
 import ProfilesSection from './Components/ProfilesSection'
+import NotificationsRuleSection from './Components/NotificationRuleSection'
 
 function App() {
   const [isAuthenticated, setAuth] = useState<boolean>(store.getState().Auth.isAuthenticated)
@@ -33,7 +34,7 @@ function App() {
               { key: "siteName", label: <Link to={"/"}>Минималичтичная соцсеть</Link> },
               { key: "profile", label: <Link to={"/Profile"}>Профиль</Link> },
               { key: "tasks", label: <Link to={"/Profiles"}>Поиск профилей</Link> },
-              { key: "students", label: <Link to={"/Students"}>Студенты</Link> },
+              { key: "norifications", label: <Link to={"/NotificationSettings"}>Настройка уведомлений</Link> },
               { key: "logout", label: <input type="button" onClick={ExecuteLogout} value="Выход" /> },
             ] : [
               { key: "siteName", label: <Link to={"/"}>Минималичтичная соцсеть</Link> },
@@ -52,6 +53,7 @@ function App() {
               <Route path='/Profile' element={<ProfileSection />} />
               <Route path='/Profile/:login' element={<ProfileSection />} />
               <Route path='/Profiles' element={<ProfilesSection />} />
+              <Route path='/NotificationSettings' element={<NotificationsRuleSection />} />
             </Route>
           </Routes>
         </Content>

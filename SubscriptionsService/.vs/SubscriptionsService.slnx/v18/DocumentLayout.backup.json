@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\SubscriptionsService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B8902CD6-30CF-ABBB-E0C7-38FA738D210E}|SubscriptionsService\\SubscriptionsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\subscriptionsservice\\subscriptionsservice\\controllers\\subscriptionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8902CD6-30CF-ABBB-E0C7-38FA738D210E}|SubscriptionsService\\SubscriptionsService.csproj|solutionrelative:subscriptionsservice\\controllers\\subscriptionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B8902CD6-30CF-ABBB-E0C7-38FA738D210E}|SubscriptionsService\\SubscriptionsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\subscriptionsservice\\subscriptionsservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B8902CD6-30CF-ABBB-E0C7-38FA738D210E}|SubscriptionsService\\SubscriptionsService.csproj|solutionrelative:subscriptionsservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B8902CD6-30CF-ABBB-E0C7-38FA738D210E}|SubscriptionsService\\SubscriptionsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\subscriptionsservice\\subscriptionsservice\\controllers\\subscriptionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8902CD6-30CF-ABBB-E0C7-38FA738D210E}|SubscriptionsService\\SubscriptionsService.csproj|solutionrelative:subscriptionsservice\\controllers\\subscriptionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B8902CD6-30CF-ABBB-E0C7-38FA738D210E}|SubscriptionsService\\SubscriptionsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\subscriptionsservice\\subscriptionsservice\\repositories\\subscriptionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8902CD6-30CF-ABBB-E0C7-38FA738D210E}|SubscriptionsService\\SubscriptionsService.csproj|solutionrelative:subscriptionsservice\\repositories\\subscriptionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8902CD6-30CF-ABBB-E0C7-38FA738D210E}|SubscriptionsService\\SubscriptionsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\subscriptionsservice\\subscriptionsservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8902CD6-30CF-ABBB-E0C7-38FA738D210E}|SubscriptionsService\\SubscriptionsService.csproj|solutionrelative:subscriptionsservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8902CD6-30CF-ABBB-E0C7-38FA738D210E}|SubscriptionsService\\SubscriptionsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\subscriptionsservice\\subscriptionsservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B8902CD6-30CF-ABBB-E0C7-38FA738D210E}|SubscriptionsService\\SubscriptionsService.csproj|solutionrelative:subscriptionsservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,27 +27,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SubscriptionsController.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\SubscriptionsService\\SubscriptionsService\\Controllers\\SubscriptionsController.cs",
-              "RelativeDocumentMoniker": "SubscriptionsService\\Controllers\\SubscriptionsController.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\SubscriptionsService\\SubscriptionsService\\Controllers\\SubscriptionsController.cs",
-              "RelativeToolTip": "SubscriptionsService\\Controllers\\SubscriptionsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T17:25:22.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\SubscriptionsService\\SubscriptionsService\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "SubscriptionsService\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\SubscriptionsService\\SubscriptionsService\\Properties\\launchSettings.json",
               "RelativeToolTip": "SubscriptionsService\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-09T17:19:59.048Z"
+              "WhenOpened": "2026-04-14T06:42:42.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SubscriptionsController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\SubscriptionsService\\SubscriptionsService\\Controllers\\SubscriptionsController.cs",
+              "RelativeDocumentMoniker": "SubscriptionsService\\Controllers\\SubscriptionsController.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\SubscriptionsService\\SubscriptionsService\\Controllers\\SubscriptionsController.cs",
+              "RelativeToolTip": "SubscriptionsService\\Controllers\\SubscriptionsController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T17:25:22.178Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -65,33 +58,9 @@
               "RelativeDocumentMoniker": "SubscriptionsService\\Repositories\\SubscriptionsRepository.cs",
               "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\SubscriptionsService\\SubscriptionsService\\Repositories\\SubscriptionsRepository.cs",
               "RelativeToolTip": "SubscriptionsService\\Repositories\\SubscriptionsRepository.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wBMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-09T13:39:15.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\SubscriptionsService\\SubscriptionsService\\Program.cs",
-              "RelativeDocumentMoniker": "SubscriptionsService\\Program.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\SubscriptionsService\\SubscriptionsService\\Program.cs",
-              "RelativeToolTip": "SubscriptionsService\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T13:34:05.138Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\SubscriptionsService\\SubscriptionsService\\appsettings.json",
-              "RelativeDocumentMoniker": "SubscriptionsService\\appsettings.json",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\SubscriptionsService\\SubscriptionsService\\appsettings.json",
-              "RelativeToolTip": "SubscriptionsService\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-09T13:35:56.425Z"
             }
           ]
         }

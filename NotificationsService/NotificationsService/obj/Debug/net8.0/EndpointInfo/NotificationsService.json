@@ -1,0 +1,161 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "NotificationsService",
+    "version": "1.0"
+  },
+  "paths": {
+    "/Consumer/StartConsuming": {
+      "post": {
+        "tags": [
+          "Consumer"
+        ],
+        "parameters": [
+          {
+            "name": "partition",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Consumer/StopConsuming": {
+      "post": {
+        "tags": [
+          "Consumer"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/PersonalNotifications/GetPersonalNotificationsRule": {
+      "get": {
+        "tags": [
+          "PersonalNotifications"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/PersonalNotifications/CreatePersonalNotificationsRules": {
+      "post": {
+        "tags": [
+          "PersonalNotifications"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateNotificationRulesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateNotificationRulesRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateNotificationRulesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/PersonalNotifications/UpdatePersonalNotificationsRules": {
+      "put": {
+        "tags": [
+          "PersonalNotifications"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateNotificationRulesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateNotificationRulesRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateNotificationRulesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/PersonalNotifications/DeletePersonalNotificationsRules": {
+      "delete": {
+        "tags": [
+          "PersonalNotifications"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreateNotificationRulesRequest": {
+        "type": "object",
+        "properties": {
+          "notificationService": {
+            "type": "string",
+            "nullable": true
+          },
+          "internalServiceIdentificator": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateNotificationRulesRequest": {
+        "type": "object",
+        "properties": {
+          "notificationService": {
+            "type": "string",
+            "nullable": true
+          },
+          "internalServiceIdentificator": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
