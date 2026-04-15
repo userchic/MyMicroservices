@@ -118,7 +118,7 @@ namespace TextPostsService.Controllers
         }
         private int? GetUserId()
         {
-            string token = HttpContext.Request.Headers.FirstOrDefault(header => header.Key == "MyAuth").Value;
+            string token = HttpContext.Request.Headers.FirstOrDefault(header => header.Key.ToLower() == "myauth").Value;
             return GetUserIdFromToken(DecipherToken(token));
         }
         private JwtSecurityToken DecipherToken(string token)

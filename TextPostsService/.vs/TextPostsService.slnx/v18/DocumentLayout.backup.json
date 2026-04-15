@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\textpostsservice\\textpostsservice\\producer\\postproducedmessagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|solutionrelative:textpostsservice\\producer\\postproducedmessagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\textpostsservice\\textpostsservice\\controllers\\textpostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|solutionrelative:textpostsservice\\controllers\\textpostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\textpostsservice\\textpostsservice\\producer\\postproducedmessagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|solutionrelative:textpostsservice\\producer\\postproducedmessagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\textpostsservice\\textpostsservice\\database\\textpostcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,19 +25,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TextPostController.cs",
               "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\Controllers\\TextPostController.cs",
               "RelativeDocumentMoniker": "TextPostsService\\Controllers\\TextPostController.cs",
               "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\Controllers\\TextPostController.cs",
               "RelativeToolTip": "TextPostsService\\Controllers\\TextPostController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAewHgAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-13T10:27:29.761Z"
+              "WhenOpened": "2026-04-13T10:27:29.761Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -53,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PostProducedMessagerService.cs",
               "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\Producer\\PostProducedMessagerService.cs",
               "RelativeDocumentMoniker": "TextPostsService\\Producer\\PostProducedMessagerService.cs",
