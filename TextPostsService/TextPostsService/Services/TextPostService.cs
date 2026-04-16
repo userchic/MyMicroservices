@@ -8,9 +8,11 @@ namespace TextPostsService.Services
     public class TextPostService : ITextPostService
     {
         ITextPostRepository postRep;
-        public TextPostService(ITextPostRepository postRep)
+        ILogger logger;
+        public TextPostService(ITextPostRepository postRep,ILogger<TextPostService> logger)
         {
             this.postRep = postRep;
+            this.logger = logger;
         }
 
         public async Task<Result<TextPost, string>> CreatePost(CreatePostRequest request,int userId)
@@ -25,7 +27,8 @@ namespace TextPostsService.Services
             TextPost post = await postRep.GetUserPost(request.Id, userId);
             if (post is null)
             {
-                return post.ToResult("Не найден нужный пост или он не принадлежит вам");
+                logger.LogWarning("Принят запрос на редактирование несуществующего поста {Id}", request.Id);
+                return post.ToResult("Пост не найден или не принадлежит вам");
             }
             post.Text = request.Text;
             postRep.Update(post);
@@ -37,6 +40,7 @@ namespace TextPostsService.Services
             TextPost postToBeDeleted = await postRep.GetUserPost(id,userId);
             if (postToBeDeleted == null)
             {
+                logger.LogWarning("Принят запрос на удаление несуществующего поста {Id}", id);
                 return ((string)null).ToResult("Пост не найден или не принадлежит вам");
             }
             postRep.Delete(postToBeDeleted);
@@ -47,6 +51,8 @@ namespace TextPostsService.Services
         public async Task<Result<TextPost, string>> GetPost(int id)
         {
             TextPost post = await postRep.GetPost(id);
+            if (post is null)
+                logger.LogWarning("Принят запрос на получение несуществующего поста {Id}", id);
             return post.ToResult("Не найден нужный пост");
         }
 

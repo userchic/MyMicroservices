@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TextPostsService</name>
+    </assembly>
+    <members>
+        <member name="T:TextPostsService.Controllers.TextPostController">
+            <response code="200"> Возвращает только этот код </response> 
+        </member>
+        <member name="M:TextPostsService.Controllers.TextPostController.CreatePost(TextPostsService.DTO.CreatePostRequest)">
+            <summary>
+            Запрос на создание поста
+            </summary>
+            <param name="request"> Текст нового поста</param>
+            <returns>Новый пост, либо error или errors</returns>
+        </member>
+        <member name="M:TextPostsService.Controllers.TextPostController.UpdatePost(TextPostsService.DTO.UpdatePostRequest)">
+            <summary>
+            Запрос на изменение поста
+            </summary>
+            <param name="request">Измененный пост с идентификатором</param>
+            <returns>Новый пост, либо error или errors</returns>
+        </member>
+        <member name="M:TextPostsService.Controllers.TextPostController.DeletePost(System.Int32)">
+            <summary>
+            Запрос на удаление поста
+            </summary>
+            <param name="id">Идентификатор удаляемого поста</param>
+            <returns>Возвращает строку с сообщением, либо error</returns>
+        </member>
+        <member name="M:TextPostsService.Controllers.TextPostController.GetPost(System.Int32)">
+            <summary>
+            Запрос на получение поста по идентификатору
+            </summary>
+            <param name="id">идентификатор поста</param>
+            <returns>Пост, либо error</returns>
+        </member>
+        <member name="M:TextPostsService.Controllers.TextPostController.GetUserPostsPage(System.Int32,System.Int32)">
+            <summary>
+            Запрос на получение страницы(10) постов указанного пользователя
+            </summary>
+            <param name="page">Номер страницы</param>
+            <param name="userId">идентификатор владельца постов</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

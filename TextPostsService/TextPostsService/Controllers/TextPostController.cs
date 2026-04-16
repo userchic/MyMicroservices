@@ -8,6 +8,7 @@ using TextPostsService.Producer;
 
 namespace TextPostsService.Controllers
 {
+    /// <response code="200"> Возвращает только этот код </response> 
     [ApiController]
     [Route("/[controller]/[action]")]
     public class TextPostController : Controller
@@ -16,8 +17,9 @@ namespace TextPostsService.Controllers
         IPostProducedMessagerService producer;
         IValidator<CreatePostRequest> createPostValidator;
         IValidator<UpdatePostRequest> updatePostValidator;
-        ILogger<TextPostController> logger;
-        public TextPostController(ILogger<TextPostController> logger,ITextPostService postService, IValidator<UpdatePostRequest> updatePostValidator,IValidator<CreatePostRequest> createPostValidator, IPostProducedMessagerService producer)
+        ILogger logger;
+        public TextPostController(ILogger<TextPostController> logger,ITextPostService postService,
+            IValidator<UpdatePostRequest> updatePostValidator,IValidator<CreatePostRequest> createPostValidator, IPostProducedMessagerService producer)
         {
             this.postService = postService;
             this.updatePostValidator = updatePostValidator;
@@ -25,6 +27,11 @@ namespace TextPostsService.Controllers
             this.logger = logger;
             this.producer = producer;
         }
+        /// <summary>
+        /// Запрос на создание поста
+        /// </summary>
+        /// <param name="request"> Текст нового поста</param>
+        /// <returns>Новый пост, либо error или errors</returns>
         [HttpPost]
         public async Task<IActionResult> CreatePost(CreatePostRequest request)
         {
@@ -47,27 +54,14 @@ namespace TextPostsService.Controllers
                 else
                     return Json(new { error = "Невозможно прочитать userId, некорректно прочитан/предоставлен токен" });
             }
+            logger.LogWarning("Получен запрос на создание поста с ошибками валидации {Count}", validationResult.Errors.Count);
             return Json(new { errors = validationResult.Errors });
         }
-        [HttpDelete()]
-        public async Task<IActionResult> DeletePost(int id)
-        {
-            if (id>-1)
-            {
-                var userId = GetUserId();
-                if (userId.HasValue)
-                {
-                    var result = await postService.DeletePost(id, userId.Value);
-                    if (result.IsSuccess)
-                        return Json(result.Value);
-                    else
-                        return Json(new { error = result.Error });
-                }
-                else
-                    return Json(new { error = "Невозможно прочитать userId, некорректно прочитан/предоставлен токен" });
-            }
-            return Json(new { error = "Указан некорректный идентификатор удаляемого поста." });
-        }
+        /// <summary>
+        /// Запрос на изменение поста
+        /// </summary>
+        /// <param name="request">Измененный пост с идентификатором</param>
+        /// <returns>Новый пост, либо error или errors</returns>
         [HttpPut]
         public async Task<IActionResult> UpdatePost(UpdatePostRequest request)
         {
@@ -87,8 +81,40 @@ namespace TextPostsService.Controllers
                 else
                     return Json(new { error = "Невозможно прочитать userId, некорректно прочитан/предоставлен токен" });
             }
+            logger.LogWarning("Получен запрос на изменение поста с ошибками валидации {Count}", validationResult.Errors.Count);
             return Json(new { errors = validationResult.Errors });
         }
+        /// <summary>
+        /// Запрос на удаление поста
+        /// </summary>
+        /// <param name="id">Идентификатор удаляемого поста</param>
+        /// <returns>Возвращает строку с сообщением, либо error</returns>
+        [HttpDelete]
+        public async Task<IActionResult> DeletePost(int id)
+        {
+            if (id>-1)
+            {
+                var userId = GetUserId();
+                if (userId.HasValue)
+                {
+                    var result = await postService.DeletePost(id, userId.Value);
+                    if (result.IsSuccess)
+                        return Json(result.Value);
+                    else
+                        return Json(new { error = result.Error });
+                }
+                else
+                    return Json(new { error = "Невозможно прочитать userId, некорректно прочитан/предоставлен токен" });
+            }
+            logger.LogWarning("Получен запрос на удаление поста с неправильным идентификатором {id}", id);
+            return Json(new { error = "Указан некорректный идентификатор удаляемого поста." });
+        }
+
+        /// <summary>
+        /// Запрос на получение поста по идентификатору
+        /// </summary>
+        /// <param name="id">идентификатор поста</param>
+        /// <returns>Пост, либо error</returns>
         [HttpGet]
         public async Task<IActionResult> GetPost(int id)
         {
@@ -100,17 +126,26 @@ namespace TextPostsService.Controllers
                 else
                     return Json(new { error = result.Error });
             }
+            logger.LogWarning("Получен запрос на получение поста с неправильным идентификатором {id}", id);
             return Json(new { error = "Указан некорректный идентификатор поста." });
         }
+        /// <summary>
+        /// Запрос на получение страницы(10) постов указанного пользователя
+        /// </summary>
+        /// <param name="page">Номер страницы</param>
+        /// <param name="userId">идентификатор владельца постов</param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetUserPostsPage(int page, int userId)
         {
             if (page <= -1)
             {
+                logger.LogWarning("Ошибка валидации при получении страницы с постами пользователя {userId}", userId);
                 return Json(new { error = "Некорректный номер страницы" });
             }
             if(userId <= -1)
             {
+                logger.LogWarning("Ошибка валидации при получении страницы с постами пользователя {userId}", userId);
                 return Json(new { error = "Некорректный идентификатор пользователя" });
             }
             var result = await postService.GetUserPostsPage(page, userId);
@@ -135,7 +170,7 @@ namespace TextPostsService.Controllers
             }
             catch
             {
-                logger.LogError("Кажется получен некорректный userId или его нет");
+                logger.LogWarning("Кажется получен некорректный userId или его нет");
                 return null;
             }
         }

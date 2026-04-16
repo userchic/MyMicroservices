@@ -1,8 +1,13 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
-    "title": "TextPostsService",
-    "version": "1.0"
+    "title": "PostsAPI",
+    "description": "API от микросервиса постов",
+    "contact": {
+      "name": "Ruslan",
+      "url": "https://github.com/userchic"
+    },
+    "version": "v1"
   },
   "paths": {
     "/TextPost/CreatePost": {
@@ -10,7 +15,27 @@
         "tags": [
           "TextPost"
         ],
+        "summary": "Запрос на создание поста",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен2",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
+          "description": "Текст нового поста",
           "content": {
             "application/json": {
               "schema": {
@@ -31,29 +56,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/TextPost/DeletePost": {
-      "delete": {
-        "tags": [
-          "TextPost"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -63,7 +66,27 @@
         "tags": [
           "TextPost"
         ],
+        "summary": "Запрос на изменение поста",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен2",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
+          "description": "Измененный пост с идентификатором",
           "content": {
             "application/json": {
               "schema": {
@@ -84,7 +107,47 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
+          }
+        }
+      }
+    },
+    "/TextPost/DeletePost": {
+      "delete": {
+        "tags": [
+          "TextPost"
+        ],
+        "summary": "Запрос на удаление поста",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Идентификатор удаляемого поста",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен2",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -94,19 +157,37 @@
         "tags": [
           "TextPost"
         ],
+        "summary": "Запрос на получение поста по идентификатору",
         "parameters": [
           {
             "name": "id",
             "in": "query",
+            "description": "идентификатор поста",
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен2",
+            "schema": {
+              "type": "string"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -116,10 +197,12 @@
         "tags": [
           "TextPost"
         ],
+        "summary": "Запрос на получение страницы(10) постов указанного пользователя",
         "parameters": [
           {
             "name": "page",
             "in": "query",
+            "description": "Номер страницы",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -128,15 +211,32 @@
           {
             "name": "userId",
             "in": "query",
+            "description": "идентификатор владельца постов",
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен2",
+            "schema": {
+              "type": "string"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -169,5 +269,10 @@
         "additionalProperties": false
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "TextPost"
+    }
+  ]
 }
