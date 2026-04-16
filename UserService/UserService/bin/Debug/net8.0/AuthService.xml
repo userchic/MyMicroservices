@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AuthService</name>
+    </assembly>
+    <members>
+        <member name="T:AuthService.Controllers.UserController">
+            <response code="200"> Возвращает только этот код </response> 
+        </member>
+        <member name="M:AuthService.Controllers.UserController.Login(AuthService.DTO.LoginRequest)">
+            <summary>
+            Выполняет вход в систему.
+            </summary>
+            <param name="request">Логин и пароль</param>
+            <returns>Токен и нового пользователя либо error или errors с ошибками</returns>
+            <remarks>
+                Возвращаемый токен надобно установить в куки. Но лучше в заголовок Authorization. 
+                Поскольку заголовок этот уничтожается прокси - предлагается использовать заголовок "myauth".
+            </remarks>
+        </member>
+        <member name="M:AuthService.Controllers.UserController.Register(AuthService.DTO.RegistryRequest)">
+            <summary>
+            Выполнит регистрацию в системе
+            </summary>
+            <param name="request"> Логин, пароль, ФИО, Email и дата рождения</param>
+            <returns>Токен и нового пользователя либо error или errors с ошибками</returns>
+            <remarks>
+                Параметры валидируются
+                Возвращаемый токен надобно установить в куки. Но лучше в заголовок Authorization. 
+                Поскольку заголовок этот уничтожается прокси - предлагается использовать заголовок "myauth".
+            </remarks>
+        </member>
+        <member name="M:AuthService.Controllers.UserController.GetProfile(System.String)">
+            <summary>
+            Запрашивает профиль пользователя
+            </summary>
+            <param name="login"> Логин запрашиваемого пользователя</param>
+            <returns>Профиль, либо error</returns>
+            <remarks>Параметры валидируются</remarks>
+        </member>
+        <member name="M:AuthService.Controllers.UserController.GetProfileById(System.Int32)">
+            <summary>
+            Запрашивает профиль пользователя
+            </summary>
+            <param name="request"> Id запрашиваемого пользователя</param>
+            <returns>Профиль, либо error</returns>
+            <remarks>Параметры валидируются</remarks>
+        </member>
+        <member name="M:AuthService.Controllers.UserController.GetProfiles(System.String,System.String,System.String,System.String)">
+            <summary>
+            Запрашивает профили пользователей, может выдать всех пользователей(нет пагинации).
+            </summary>
+            <param name="login">Логин</param>
+            <param name="name">Имя</param>
+            <param name="surname">Фамилия</param>
+            <param name="fatname">Отчество</param>
+            <returns>Профиль, либо error</returns>
+            <remarks>Нет валидации, возвращается только список. Параметры не обязательны.</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:AuthService.Controllers.UserController.ChangeProfile(AuthService.DTO.ChangeProfileRequest)">
+            <summary>
+            Выполняет редактирование профиля.
+            </summary>
+            <param name="request"> Логин, имя, фамилия, отчество, Email, дата рождения и Login с паролем измененного пользователя.</param>
+            <returns>Измененный профиль, либо error или errors с ошибками</returns>
+            <remarks>Здесь нужен Header myauth с токеном Bearer.</remarks>
+        </member>
+        <member name="T:AuthService.DTO.LoginRequest">
+            <summary>
+            Контракт для запроса на вход в систему
+            </summary>
+        </member>
+        <member name="P:AuthService.DTO.LoginRequest.Login">
+            <summary>
+            Логин
+            </summary>
+        </member>
+        <member name="P:AuthService.DTO.LoginRequest.Password">
+            <summary>
+            Пароль
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,8 +1,13 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
-    "title": "AuthService",
-    "version": "1.0"
+    "title": "User API",
+    "description": "API от микросервиса пользователей",
+    "contact": {
+      "name": "Ruslan",
+      "url": "https://github.com/userchic"
+    },
+    "version": "v1"
   },
   "paths": {
     "/User/Login": {
@@ -10,7 +15,28 @@
         "tags": [
           "User"
         ],
+        "summary": "Выполняет вход в систему.",
+        "description": "Возвращаемый токен надобно установить в куки. Но лучше в заголовок Authorization. \r\nПоскольку заголовок этот уничтожается прокси - предлагается использовать заголовок \"myauth\".",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен2",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
+          "description": "Логин и пароль",
           "content": {
             "application/json": {
               "schema": {
@@ -31,7 +57,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -41,7 +67,28 @@
         "tags": [
           "User"
         ],
+        "summary": "Выполнит регистрацию в системе",
+        "description": "Параметры валидируются\r\nВозвращаемый токен надобно установить в куки. Но лучше в заголовок Authorization. \r\nПоскольку заголовок этот уничтожается прокси - предлагается использовать заголовок \"myauth\".",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен2",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
+          "description": "Логин, пароль, ФИО, Email и дата рождения",
           "content": {
             "application/json": {
               "schema": {
@@ -62,7 +109,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -72,10 +119,29 @@
         "tags": [
           "User"
         ],
+        "summary": "Запрашивает профиль пользователя",
+        "description": "Параметры валидируются",
         "parameters": [
           {
             "name": "login",
             "in": "query",
+            "description": "Логин запрашиваемого пользователя",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен2",
             "schema": {
               "type": "string"
             }
@@ -83,7 +149,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -93,6 +159,8 @@
         "tags": [
           "User"
         ],
+        "summary": "Запрашивает профиль пользователя",
+        "description": "Параметры валидируются",
         "parameters": [
           {
             "name": "userId",
@@ -101,11 +169,27 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен2",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -115,10 +199,13 @@
         "tags": [
           "User"
         ],
+        "summary": "Запрашивает профили пользователей, может выдать всех пользователей(нет пагинации).",
+        "description": "Нет валидации, возвращается только список. Параметры не обязательны.",
         "parameters": [
           {
             "name": "login",
             "in": "query",
+            "description": "Логин",
             "schema": {
               "type": "string"
             }
@@ -126,6 +213,7 @@
           {
             "name": "name",
             "in": "query",
+            "description": "Имя",
             "schema": {
               "type": "string"
             }
@@ -133,6 +221,7 @@
           {
             "name": "surname",
             "in": "query",
+            "description": "Фамилия",
             "schema": {
               "type": "string"
             }
@@ -140,6 +229,23 @@
           {
             "name": "fatname",
             "in": "query",
+            "description": "Отчество",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен2",
             "schema": {
               "type": "string"
             }
@@ -147,7 +253,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -157,7 +263,28 @@
         "tags": [
           "User"
         ],
+        "summary": "Выполняет редактирование профиля.",
+        "description": "Здесь нужен Header myauth с токеном Bearer.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен2",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
+          "description": "Логин, имя, фамилия, отчество, Email, дата рождения и Login с паролем измененного пользователя.",
           "content": {
             "application/json": {
               "schema": {
@@ -178,7 +305,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -225,14 +352,17 @@
         "properties": {
           "login": {
             "type": "string",
+            "description": "Логин",
             "nullable": true
           },
           "password": {
             "type": "string",
+            "description": "Пароль",
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Контракт для запроса на вход в систему"
       },
       "RegistryRequest": {
         "type": "object",
@@ -269,5 +399,10 @@
         "additionalProperties": false
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "User"
+    }
+  ]
 }

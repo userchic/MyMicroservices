@@ -1,14 +1,17 @@
-using Microsoft.EntityFrameworkCore;
+using AuthService;
 using AuthService.Abstractions;
 using AuthService.DataBase;
-using AuthService.Services;
 using AuthService.DTO;
-using FluentValidation;
-using AuthService.Validators;
 using AuthService.Repositories;
+using AuthService.Services;
+using AuthService.SwaggerFilters;
+using AuthService.Validators;
+using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using AuthService;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +20,26 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "User API",
+        Description = "API от микросервиса пользователей",
+        Contact = new OpenApiContact
+        {
+            Name = "Ruslan",
+            Url = new Uri("https://github.com/userchic")
+        },
+        
+    });
+    var basePath = AppContext.BaseDirectory;
+
+    var xmlPath = Path.Combine(basePath, "AuthService.xml");
+    options.IncludeXmlComments(xmlPath);
+    options.AddOperationFilterInstance<AuthHeaderFilter>(new AuthHeaderFilter());
+});
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer("Bearer",options =>
         {
@@ -57,6 +79,18 @@ builder.Services.AddScoped<IUserRepository, UsersRepository>();
 
 builder.Services.AddMemoryCache();
 
+Log.Logger = new LoggerConfiguration()
+    .Enrich.FromLogContext()
+    .WriteTo.Console()
+    .CreateLogger();
+
+builder.Host.ConfigureLogging(logging =>
+{
+    logging.AddSerilog();
+    logging.SetMinimumLevel(LogLevel.Information);
+})
+.UseSerilog();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -65,6 +99,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 app.UseCors(builder =>
 builder.AllowAnyHeader()
