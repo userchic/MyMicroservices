@@ -7,6 +7,7 @@ using System.Text;
 
 namespace SubscriptionsService.Controllers
 {
+    /// <response code="200"> Возвращает только этот код </response> 
     [ApiController]
     [Route("/[controller]/[action]")]
     public class SubscriptionsController:Controller
@@ -18,17 +19,33 @@ namespace SubscriptionsService.Controllers
             _subsService = subsService;
             logger= logger;
         }
+
+        /// <summary>
+        /// Запрос на получение списка подписок конкретного пользователя
+        /// </summary>
+        /// <param name="userId">Идентификатор пользователя</param>
+        /// <returns>Возвращает список подписок</returns>
         [HttpGet]
         public IActionResult GetSubscriptions(int userId)
         {
             var subscriptions = _subsService.GetSubscriptions(userId);
             return Json(subscriptions);
         }
+        /// <summary>
+        /// Запрос на получение списка подписчиков конкретного пользователя
+        /// </summary>
+        /// <param name="userId">Идентификатор пользователя </param>
+        /// <returns>Возвращает список подписчиков</returns>
         [HttpGet]
         public IActionResult GetSubscribers(int userId)
         {
             return Json((_subsService.GetSubscribers(userId)).ToArray());
         }
+        /// <summary>
+        /// Запрос факта подписки на пользователя(подписан или нет)
+        /// </summary>
+        /// <param name="targetUserId">Идентификатор пользователя</param>
+        /// <returns>Возвращает isSubscribed, либо error</returns>
         [HttpGet]
         public async Task<IActionResult> GetIsSubscribed(int targetUserId)
         {
@@ -41,6 +58,11 @@ namespace SubscriptionsService.Controllers
                 isSubscribed = (await _subsService.IsSubscribed(userId.Value, targetUserId)).ToString() 
             });
         }
+        /// <summary>
+        /// Запрос на подписку на пользователя
+        /// </summary>
+        /// <param name="targetId">Идентификатор пользователя</param>
+        /// <returns>Возвращает message либо error</returns>
         [HttpPost]
         public async Task<IActionResult> Subscribe(int targetId)
         {
@@ -56,6 +78,11 @@ namespace SubscriptionsService.Controllers
             }
             return Json(new { error = result.Error });
         }
+        /// <summary>
+        /// Запрос на отписку от пользователя
+        /// </summary>
+        /// <param name="targetId">Идентификатор пользователя</param>
+        /// <returns>Возвращает message либо error</returns>
         [HttpPost]
         public async Task<IActionResult> Unsubscribe(int targetId)
         {

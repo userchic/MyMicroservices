@@ -23,6 +23,13 @@ namespace NotificationsService.Controllers
             this.createRequestValidator = createRequestValidator;
             this.updateRequestValidator = updateRequestValidator;
         }
+        /// <summary>
+        /// Запрос правила уведомления пользователя
+        /// </summary>
+        /// <returns>Возвращает правило, либо error</returns>
+        /// <remarks>Пользователь определяется по payload JWT токена.
+        /// Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.
+        /// </remarks>
         [HttpGet]
         public async Task<IActionResult> GetPersonalNotificationsRule()
         {
@@ -37,6 +44,15 @@ namespace NotificationsService.Controllers
             else
                 return Json(new { error = "Правило уведомления не было найдено, скорее всего оно не существует" });
         }
+        /// <summary>
+        /// Запрос на создание правила уведомления пользователя
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns>Возвращает message, либо error</returns>
+        /// <remarks>Пользователь определяется по payload JWT токена.
+        /// Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.
+        /// </remarks>
+
         [HttpPost]
         public async Task<IActionResult> CreatePersonalNotificationsRules(CreateNotificationRulesRequest request)
         {
@@ -55,6 +71,14 @@ namespace NotificationsService.Controllers
             else
                 return Json(new { error = result.Error });
         }
+        /// <summary>
+        /// Запрос на изменение правила уведомления пользователя
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns>Возвращает message, либо error</returns>
+        /// <remarks>Пользователь определяется по payload JWT токена.
+        /// Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.
+        /// </remarks>
         [HttpPut]
         public async Task<IActionResult> UpdatePersonalNotificationsRules(UpdateNotificationRulesRequest request)
         {
@@ -73,6 +97,13 @@ namespace NotificationsService.Controllers
             else
                 return Json(new { error = result.Error });
         }
+        /// <summary>
+        /// Запрос на удаление правила уведомления пользователя
+        /// </summary>
+        /// <returns>Возвращает message, либо error</returns>
+        /// <remarks>Пользователь определяется по payload JWT токена.
+        /// Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.
+        /// </remarks>
         [HttpDelete]
         public async Task<IActionResult> DeletePersonalNotificationsRules()
         {

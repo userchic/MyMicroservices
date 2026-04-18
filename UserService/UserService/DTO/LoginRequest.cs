@@ -1,4 +1,6 @@
-﻿namespace AuthService.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AuthService.DTO
 {
     /// <summary>
     /// Контракт для запроса на вход в систему

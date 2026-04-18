@@ -23,7 +23,7 @@ namespace NotificationsService.Services
             User postman = httpClientService.RequestUser(userId);
             if (postman is null)
             {
-                logger.LogError("пользователь указанный в сообщении не найден");
+                logger.LogError("Пользователь указанный в сообщении не найден");
                 return;
             }
             ICollection<Subscription> subsToBeNotified = httpClientService.RequestSubscribers(userId);

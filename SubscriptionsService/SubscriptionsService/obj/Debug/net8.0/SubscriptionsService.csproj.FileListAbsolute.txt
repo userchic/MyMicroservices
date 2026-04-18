@@ -53,3 +53,15 @@ C:\Users\Руслан Габзалилов\Desktop\myMicroservices\Subscriptions
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\obj\Debug\net8.0\SubscriptionsService.pdb
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\obj\Debug\net8.0\SubscriptionsService.genruntimeconfig.cache
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\obj\Debug\net8.0\ref\SubscriptionsService.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\Serilog.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\SubscriptionsService.xml
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\obj\Debug\net8.0\SubscriptionsService.xml

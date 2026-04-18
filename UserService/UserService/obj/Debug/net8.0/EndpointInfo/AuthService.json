@@ -19,17 +19,9 @@
         "description": "Возвращаемый токен надобно установить в куки. Но лучше в заголовок Authorization. \r\nПоскольку заголовок этот уничтожается прокси - предлагается использовать заголовок \"myauth\".",
         "parameters": [
           {
-            "name": "Authorization",
-            "in": "header",
-            "description": "JWT токен",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "MyAuth",
             "in": "header",
-            "description": "JWT токен2",
+            "description": "JWT токен",
             "schema": {
               "type": "string"
             }
@@ -71,17 +63,9 @@
         "description": "Параметры валидируются\r\nВозвращаемый токен надобно установить в куки. Но лучше в заголовок Authorization. \r\nПоскольку заголовок этот уничтожается прокси - предлагается использовать заголовок \"myauth\".",
         "parameters": [
           {
-            "name": "Authorization",
-            "in": "header",
-            "description": "JWT токен",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "MyAuth",
             "in": "header",
-            "description": "JWT токен2",
+            "description": "JWT токен",
             "schema": {
               "type": "string"
             }
@@ -131,17 +115,9 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "description": "JWT токен",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "MyAuth",
             "in": "header",
-            "description": "JWT токен2",
+            "description": "JWT токен",
             "schema": {
               "type": "string"
             }
@@ -171,17 +147,9 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "description": "JWT токен",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "MyAuth",
             "in": "header",
-            "description": "JWT токен2",
+            "description": "JWT токен",
             "schema": {
               "type": "string"
             }
@@ -235,17 +203,9 @@
             }
           },
           {
-            "name": "Authorization",
-            "in": "header",
-            "description": "JWT токен",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "MyAuth",
             "in": "header",
-            "description": "JWT токен2",
+            "description": "JWT токен",
             "schema": {
               "type": "string"
             }
@@ -267,17 +227,9 @@
         "description": "Здесь нужен Header myauth с токеном Bearer.",
         "parameters": [
           {
-            "name": "Authorization",
-            "in": "header",
-            "description": "JWT токен",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "MyAuth",
             "in": "header",
-            "description": "JWT токен2",
+            "description": "JWT токен",
             "schema": {
               "type": "string"
             }
@@ -318,34 +270,42 @@
         "properties": {
           "login": {
             "type": "string",
+            "description": "Логин",
             "nullable": true
           },
           "password": {
             "type": "string",
+            "description": "Пароль",
             "nullable": true
           },
           "name": {
             "type": "string",
+            "description": "Имя",
             "nullable": true
           },
           "surname": {
             "type": "string",
+            "description": "Фамилия",
             "nullable": true
           },
           "fatname": {
             "type": "string",
+            "description": "Отчество",
             "nullable": true
           },
           "email": {
             "type": "string",
+            "description": "Емаил",
             "nullable": true
           },
           "birthday": {
             "type": "string",
+            "description": "Дата рождения",
             "format": "date"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Контракт запроса на изменение профиля"
       },
       "LoginRequest": {
         "type": "object",
@@ -369,34 +329,42 @@
         "properties": {
           "login": {
             "type": "string",
+            "description": "Логин",
             "nullable": true
           },
           "password": {
             "type": "string",
+            "description": "Пароль",
             "nullable": true
           },
           "name": {
             "type": "string",
+            "description": "Имя",
             "nullable": true
           },
           "surname": {
             "type": "string",
+            "description": "Фамилия",
             "nullable": true
           },
           "fatname": {
             "type": "string",
+            "description": "Отчество",
             "nullable": true
           },
           "email": {
             "type": "string",
+            "description": "Емаил",
             "nullable": true
           },
           "birthday": {
             "type": "string",
+            "description": "Дата рождения",
             "format": "date"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Контракт запроса на регистрацию"
       }
     }
   },

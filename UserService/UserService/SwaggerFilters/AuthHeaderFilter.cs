@@ -16,19 +16,9 @@ namespace AuthService.SwaggerFilters
             {
                 operation.Parameters = new List<IOpenApiParameter>();
             }
-
             var parameter = new OpenApiParameter
             {
                 Description = "JWT токен",
-                In = ParameterLocation.Header,
-                Name = "Authorization",
-                Required = false,
-                Schema = new OpenApiSchema() { Type = JsonSchemaType.String }
-            };
-            operation.Parameters.Add(parameter);
-            parameter = new OpenApiParameter
-            {
-                Description = "JWT токен2",
                 In = ParameterLocation.Header,
                 Name = "MyAuth",
                 Required = false,

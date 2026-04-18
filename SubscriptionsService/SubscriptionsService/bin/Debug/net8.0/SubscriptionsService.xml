@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SubscriptionsService</name>
+    </assembly>
+    <members>
+        <member name="T:SubscriptionsService.Controllers.SubscriptionsController">
+            <response code="200"> Возвращает только этот код </response> 
+        </member>
+        <member name="M:SubscriptionsService.Controllers.SubscriptionsController.GetSubscriptions(System.Int32)">
+            <summary>
+            Запрос на получение списка подписок конкретного пользователя
+            </summary>
+            <param name="userId">Идентификатор пользователя</param>
+            <returns>Возвращает список подписок</returns>
+        </member>
+        <member name="M:SubscriptionsService.Controllers.SubscriptionsController.GetSubscribers(System.Int32)">
+            <summary>
+            Запрос на получение списка подписчиков конкретного пользователя
+            </summary>
+            <param name="userId">Идентификатор пользователя </param>
+            <returns>Возвращает список подписчиков</returns>
+        </member>
+        <member name="M:SubscriptionsService.Controllers.SubscriptionsController.GetIsSubscribed(System.Int32)">
+            <summary>
+            Запрос факта подписки на пользователя(подписан или нет)
+            </summary>
+            <param name="targetUserId">Идентификатор пользователя</param>
+            <returns>Возвращает isSubscribed, либо error</returns>
+        </member>
+        <member name="M:SubscriptionsService.Controllers.SubscriptionsController.Subscribe(System.Int32)">
+            <summary>
+            Запрос на подписку на пользователя
+            </summary>
+            <param name="targetId">Идентификатор пользователя</param>
+            <returns>Возвращает message либо error</returns>
+        </member>
+        <member name="M:SubscriptionsService.Controllers.SubscriptionsController.Unsubscribe(System.Int32)">
+            <summary>
+            Запрос на отписку от пользователя
+            </summary>
+            <param name="targetId">Идентификатор пользователя</param>
+            <returns>Возвращает message либо error</returns>
+        </member>
+    </members>
+</doc>

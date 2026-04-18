@@ -1,8 +1,13 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
-    "title": "NotificationsService",
-    "version": "1.0"
+    "title": "PostsAPI",
+    "description": "API от микросервиса постов",
+    "contact": {
+      "name": "Ruslan",
+      "url": "https://github.com/userchic"
+    },
+    "version": "v1"
   },
   "paths": {
     "/Consumer/StartConsuming": {
@@ -10,13 +15,24 @@
         "tags": [
           "Consumer"
         ],
+        "summary": "Запрос на запуск консюмера читающего сообщения об опубликованных постах",
+        "description": "Консюмер возможен только один и попытки создать еще не приведут ни к чему",
         "parameters": [
           {
             "name": "partition",
             "in": "query",
+            "description": "Партиция из которой будет идти потребление",
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -32,6 +48,18 @@
         "tags": [
           "Consumer"
         ],
+        "summary": "Запрос на остановку работы консюмера",
+        "description": "Консюмер возможен только один и попытки создать еще не приведут ни к чему. Консюмер выключится сразу, либо где-то за 10 секунд если он не может найти сообщения.",
+        "parameters": [
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -43,6 +71,18 @@
       "get": {
         "tags": [
           "PersonalNotifications"
+        ],
+        "summary": "Запрос правила уведомления пользователя",
+        "description": "Пользователь определяется по payload JWT токена.\r\n            Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.",
+        "parameters": [
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -56,7 +96,20 @@
         "tags": [
           "PersonalNotifications"
         ],
+        "summary": "Запрос на создание правила уведомления пользователя",
+        "description": "Пользователь определяется по payload JWT токена.\r\n            Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.",
+        "parameters": [
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -87,7 +140,20 @@
         "tags": [
           "PersonalNotifications"
         ],
+        "summary": "Запрос на изменение правила уведомления пользователя",
+        "description": "Пользователь определяется по payload JWT токена.\r\n            Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.",
+        "parameters": [
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -117,6 +183,18 @@
       "delete": {
         "tags": [
           "PersonalNotifications"
+        ],
+        "summary": "Запрос на удаление правила уведомления пользователя",
+        "description": "Пользователь определяется по payload JWT токена.\r\n            Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.",
+        "parameters": [
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -157,5 +235,13 @@
         "additionalProperties": false
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "Consumer"
+    },
+    {
+      "name": "PersonalNotifications"
+    }
+  ]
 }

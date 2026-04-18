@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\textpostsservice\\textpostsservice\\producer\\postproducedmessagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|solutionrelative:textpostsservice\\producer\\postproducedmessagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\textpostsservice\\textpostsservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|solutionrelative:textpostsservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,10 +27,6 @@
       "RelativeMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|solutionrelative:textpostsservice\\services\\textpostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\textpostsservice\\textpostsservice\\producer\\postproducedmessagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|solutionrelative:textpostsservice\\producer\\postproducedmessagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\textpostsservice\\textpostsservice\\database\\textpostcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{705205E8-B50A-A52D-05DA-1C3A60A575F5}|TextPostsService\\TextPostsService.csproj|solutionrelative:textpostsservice\\database\\textpostcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,50 +41,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TextPostsService",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\TextPostsService.csproj",
-              "RelativeDocumentMoniker": "TextPostsService\\TextPostsService.csproj",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\TextPostsService.csproj",
-              "RelativeToolTip": "TextPostsService\\TextPostsService.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-16T15:37:38.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthHeaderFilter.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\SwaggerFilters\\AuthHeaderFilter.cs",
-              "RelativeDocumentMoniker": "TextPostsService\\SwaggerFilters\\AuthHeaderFilter.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\SwaggerFilters\\AuthHeaderFilter.cs",
-              "RelativeToolTip": "TextPostsService\\SwaggerFilters\\AuthHeaderFilter.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBYAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T15:29:31.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\Program.cs",
               "RelativeDocumentMoniker": "TextPostsService\\Program.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\Program.cs*",
-              "RelativeToolTip": "TextPostsService\\Program.cs*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACQAAAA+AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\Program.cs",
+              "RelativeToolTip": "TextPostsService\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-16T14:40:32.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TextPostService.cs",
               "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\Services\\TextPostService.cs",
               "RelativeDocumentMoniker": "TextPostsService\\Services\\TextPostService.cs",
@@ -92,12 +66,11 @@
               "RelativeToolTip": "TextPostsService\\Services\\TextPostService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T14:33:01.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T14:33:01.14Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TextPostController.cs",
               "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\Controllers\\TextPostController.cs",
               "RelativeDocumentMoniker": "TextPostsService\\Controllers\\TextPostController.cs",
@@ -105,8 +78,44 @@
               "RelativeToolTip": "TextPostsService\\Controllers\\TextPostController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-13T10:27:29.761Z",
+              "WhenOpened": "2026-04-13T10:27:29.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PostProducedMessagerService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\Producer\\PostProducedMessagerService.cs",
+              "RelativeDocumentMoniker": "TextPostsService\\Producer\\PostProducedMessagerService.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\Producer\\PostProducedMessagerService.cs*",
+              "RelativeToolTip": "TextPostsService\\Producer\\PostProducedMessagerService.cs*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T17:42:19.42Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthHeaderFilter.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\SwaggerFilters\\AuthHeaderFilter.cs",
+              "RelativeDocumentMoniker": "TextPostsService\\SwaggerFilters\\AuthHeaderFilter.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\SwaggerFilters\\AuthHeaderFilter.cs",
+              "RelativeToolTip": "TextPostsService\\SwaggerFilters\\AuthHeaderFilter.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T15:29:31.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TextPostsService.csproj",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\TextPostsService.csproj",
+              "RelativeDocumentMoniker": "TextPostsService\\TextPostsService.csproj",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\TextPostsService.csproj",
+              "RelativeToolTip": "TextPostsService\\TextPostsService.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-16T15:37:38.276Z"
             },
             {
               "$type": "Document",
@@ -118,21 +127,7 @@
               "RelativeToolTip": "TextPostsService\\DataBase\\TextPostContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-13T10:27:28.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PostProducedMessagerService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\Producer\\PostProducedMessagerService.cs",
-              "RelativeDocumentMoniker": "TextPostsService\\Producer\\PostProducedMessagerService.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\TextPostsService\\TextPostsService\\Producer\\PostProducedMessagerService.cs",
-              "RelativeToolTip": "TextPostsService\\Producer\\PostProducedMessagerService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBcAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T17:42:19.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-13T10:27:28.311Z"
             },
             {
               "$type": "Document",

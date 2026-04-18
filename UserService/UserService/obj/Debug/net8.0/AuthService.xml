@@ -66,6 +66,11 @@
             <returns>Измененный профиль, либо error или errors с ошибками</returns>
             <remarks>Здесь нужен Header myauth с токеном Bearer.</remarks>
         </member>
+        <member name="T:AuthService.DTO.ChangeProfileRequest">
+            <summary>
+            Контракт запроса на изменение профиля
+            </summary>
+        </member>
         <member name="T:AuthService.DTO.LoginRequest">
             <summary>
             Контракт для запроса на вход в систему
@@ -79,6 +84,46 @@
         <member name="P:AuthService.DTO.LoginRequest.Password">
             <summary>
             Пароль
+            </summary>
+        </member>
+        <member name="T:AuthService.DTO.RegistryRequest">
+            <summary>
+            Контракт запроса на регистрацию
+            </summary>
+        </member>
+        <member name="P:AuthService.DTO.RegistryRequest.Login">
+            <summary>
+            Логин
+            </summary>
+        </member>
+        <member name="P:AuthService.DTO.RegistryRequest.Password">
+            <summary>
+            Пароль
+            </summary>
+        </member>
+        <member name="P:AuthService.DTO.RegistryRequest.Name">
+            <summary>
+            Имя
+            </summary>
+        </member>
+        <member name="P:AuthService.DTO.RegistryRequest.Surname">
+            <summary>
+            Фамилия
+            </summary>
+        </member>
+        <member name="P:AuthService.DTO.RegistryRequest.Fatname">
+            <summary>
+            Отчество
+            </summary>
+        </member>
+        <member name="P:AuthService.DTO.RegistryRequest.Email">
+            <summary>
+            Емаил
+            </summary>
+        </member>
+        <member name="P:AuthService.DTO.RegistryRequest.Birthday">
+            <summary>
+            Дата рождения
             </summary>
         </member>
     </members>

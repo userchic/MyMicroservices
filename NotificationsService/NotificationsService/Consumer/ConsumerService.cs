@@ -10,7 +10,7 @@ namespace NotificationsService.Consumer
         IConsumer<string, int> _consumer;
         INotificationsService notificationsService;
 
-        CancellationTokenSource cancellationSource=new();
+        CancellationTokenSource cancellationSource;
         bool isConsuming = false;
         public ConsumerService(INotificationsService notifService)
         {
@@ -27,6 +27,7 @@ namespace NotificationsService.Consumer
                 GroupId = "my-consumer-group",
                 AutoOffsetReset = AutoOffsetReset.Earliest
             };
+            cancellationSource = new();
             _consumer = new ConsumerBuilder<string, int>(config).Build();
             _consumer.Subscribe("postCreated");
             _consumer.Assign(new TopicPartition("postCreated", new Partition(partition)));

@@ -1,8 +1,13 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
-    "title": "SubscriptionsService",
-    "version": "1.0"
+    "title": "PostsAPI",
+    "description": "API от микросервиса постов",
+    "contact": {
+      "name": "Ruslan",
+      "url": "https://github.com/userchic"
+    },
+    "version": "v1"
   },
   "paths": {
     "/Subscriptions/GetSubscriptions": {
@@ -10,19 +15,29 @@
         "tags": [
           "Subscriptions"
         ],
+        "summary": "Запрос на получение списка подписок конкретного пользователя",
         "parameters": [
           {
             "name": "userId",
             "in": "query",
+            "description": "Идентификатор пользователя",
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -32,19 +47,29 @@
         "tags": [
           "Subscriptions"
         ],
+        "summary": "Запрос на получение списка подписчиков конкретного пользователя",
         "parameters": [
           {
             "name": "userId",
             "in": "query",
+            "description": "Идентификатор пользователя",
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -54,19 +79,29 @@
         "tags": [
           "Subscriptions"
         ],
+        "summary": "Запрос факта подписки на пользователя(подписан или нет)",
         "parameters": [
           {
             "name": "targetUserId",
             "in": "query",
+            "description": "Идентификатор пользователя",
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -76,19 +111,29 @@
         "tags": [
           "Subscriptions"
         ],
+        "summary": "Запрос на подписку на пользователя",
         "parameters": [
           {
             "name": "targetId",
             "in": "query",
+            "description": "Идентификатор пользователя",
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
@@ -98,23 +143,38 @@
         "tags": [
           "Subscriptions"
         ],
+        "summary": "Запрос на отписку от пользователя",
         "parameters": [
           {
             "name": "targetId",
             "in": "query",
+            "description": "Идентификатор пользователя",
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Возвращает только этот код"
           }
         }
       }
     }
   },
-  "components": { }
+  "components": { },
+  "tags": [
+    {
+      "name": "Subscriptions"
+    }
+  ]
 }

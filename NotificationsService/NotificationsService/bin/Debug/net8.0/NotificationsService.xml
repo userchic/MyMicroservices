@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NotificationsService</name>
+    </assembly>
+    <members>
+        <member name="M:NotificationsService.Controllers.ConsumerController.StartConsuming(System.Int32)">
+            <summary>
+            Запрос на запуск консюмера читающего сообщения об опубликованных постах
+            </summary>
+            <param name="partition">Партиция из которой будет идти потребление</param>
+            <returns>Возвращает message, либо error</returns>
+            <remarks>Консюмер возможен только один и попытки создать еще не приведут ни к чему</remarks>
+        </member>
+        <member name="M:NotificationsService.Controllers.ConsumerController.StopConsuming">
+            <summary>
+            Запрос на остановку работы консюмера
+            </summary>
+            <returns>Возвращает message, либо error</returns>
+            <remarks>Консюмер возможен только один и попытки создать еще не приведут ни к чему. Консюмер выключится сразу, либо где-то за 10 секунд если он не может найти сообщения.</remarks>
+        </member>
+        <member name="M:NotificationsService.Controllers.PersonalNotificationsController.GetPersonalNotificationsRule">
+            <summary>
+            Запрос правила уведомления пользователя
+            </summary>
+            <returns>Возвращает правило, либо error</returns>
+            <remarks>Пользователь определяется по payload JWT токена.
+            Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.
+            </remarks>
+        </member>
+        <member name="M:NotificationsService.Controllers.PersonalNotificationsController.CreatePersonalNotificationsRules(NotificationsService.DTO.CreateNotificationRulesRequest)">
+            <summary>
+            Запрос на создание правила уведомления пользователя
+            </summary>
+            <param name="request"></param>
+            <returns>Возвращает message, либо error</returns>
+            <remarks>Пользователь определяется по payload JWT токена.
+            Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.
+            </remarks>
+        </member>
+        <member name="M:NotificationsService.Controllers.PersonalNotificationsController.UpdatePersonalNotificationsRules(NotificationsService.DTO.UpdateNotificationRulesRequest)">
+            <summary>
+            Запрос на изменение правила уведомления пользователя
+            </summary>
+            <param name="request"></param>
+            <returns>Возвращает message, либо error</returns>
+            <remarks>Пользователь определяется по payload JWT токена.
+            Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.
+            </remarks>
+        </member>
+        <member name="M:NotificationsService.Controllers.PersonalNotificationsController.DeletePersonalNotificationsRules">
+            <summary>
+            Запрос на удаление правила уведомления пользователя
+            </summary>
+            <returns>Возвращает message, либо error</returns>
+            <remarks>Пользователь определяется по payload JWT токена.
+            Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.
+            </remarks>
+        </member>
+    </members>
+</doc>
