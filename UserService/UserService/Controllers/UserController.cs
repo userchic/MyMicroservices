@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
+using Prometheus;
+using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -24,6 +26,12 @@ namespace AuthService.Controllers
         IValidator<LoginRequest> loginValidator;
         IValidator<RegistryRequest> registryValidator;
         IValidator<ChangeProfileRequest> changeProfileValidator;
+        Counter loginsCounter;
+        Counter registerCounter;
+        Counter getProfileCounter;
+        Counter getProfileByIdCounter;
+        Counter getProfilesCounter;
+        Counter changeProfileCounter;
         ILogger logger;
         IMemoryCache usersCache;
         public UserController(IUserService userservice, IValidator<LoginRequest> loginvalidator, IValidator<RegistryRequest> registryvalidator, IValidator<ChangeProfileRequest> changeprofilevalidator,
@@ -35,6 +43,12 @@ namespace AuthService.Controllers
             changeProfileValidator = changeprofilevalidator;
             this.logger = logger;
             usersCache = cache;
+            loginsCounter = Metrics.CreateCounter("LoginCounter", "Increments on login");
+            registerCounter = Metrics.CreateCounter("RegisterCounter", "Increments on registry");
+            getProfileCounter = Metrics.CreateCounter("GetProfileCounter", "Increments on getting profile");
+            getProfileByIdCounter = Metrics.CreateCounter("GetProfileByIdCounter", "Increments on getting profile by id");
+            getProfilesCounter = Metrics.CreateCounter("GetProfilesCounter", "Increments on getting profiles");
+            changeProfileCounter = Metrics.CreateCounter("ChangeProfileCounter", "Increments on profile change");
         }
         /// <summary>
         /// Выполняет вход в систему.
@@ -48,6 +62,8 @@ namespace AuthService.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginRequest request)
         {
+            loginsCounter.Inc();
+            loginsCounter.Publish();
             var result = await loginValidator.ValidateAsync(request);
             if (result.IsValid)
             {
@@ -76,6 +92,8 @@ namespace AuthService.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegistryRequest request)
         {
+            registerCounter.Inc();
+            registerCounter.Publish();
             var result = await registryValidator.ValidateAsync(request);
             if (result.IsValid)
             {
@@ -100,6 +118,8 @@ namespace AuthService.Controllers
         [HttpGet]
         public async Task<IActionResult> GetProfile(string login)
         {
+            getProfileCounter.Inc();
+            getProfileCounter.Publish();
             if (string.IsNullOrEmpty(login))
             {
                 logger.LogWarning("Ошибки валидации запроса профиля по Login - {Count}шт", 1);
@@ -132,6 +152,8 @@ namespace AuthService.Controllers
         [HttpGet]
         public async Task<IActionResult> GetProfileById(int userId)
         {
+            getProfileByIdCounter.Inc();
+            getProfileByIdCounter.Publish();
             if (userId<=-1)
             {
                 logger.LogWarning("Ошибки валидации запроса профиля по Id - {Count}шт", 1);
@@ -159,6 +181,8 @@ namespace AuthService.Controllers
         [HttpGet]
         public async Task<IActionResult> GetProfiles(string? login, string? name, string? surname, string? fatname)
         {
+            getProfilesCounter.Inc();
+            getProfilesCounter.Publish();
             return Json(await _userService.GetProfiles(login, name, surname, fatname));
         }
         /// <summary>
@@ -170,6 +194,8 @@ namespace AuthService.Controllers
         [HttpPut]
         public async Task<IActionResult> ChangeProfile(ChangeProfileRequest request)
         {
+            changeProfileCounter.Inc();
+            changeProfileCounter.Publish();
             int? userId = GetUserId();
             if (!userId.HasValue)
             {
