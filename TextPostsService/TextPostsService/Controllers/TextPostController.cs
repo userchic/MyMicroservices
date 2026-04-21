@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Prometheus;
 using System.IdentityModel.Tokens.Jwt;
 using TextPostsService.Abstractions;
 using TextPostsService.DTO;
@@ -17,6 +18,12 @@ namespace TextPostsService.Controllers
         IPostProducedMessagerService producer;
         IValidator<CreatePostRequest> createPostValidator;
         IValidator<UpdatePostRequest> updatePostValidator;
+        Counter createPostCounter;
+        Counter updatePostCounter;
+        Counter deletePostCounter;
+        Counter getPostCounter;
+        Counter getUserPostsPageCounter;
+
         ILogger logger;
         public TextPostController(ILogger<TextPostController> logger,ITextPostService postService,
             IValidator<UpdatePostRequest> updatePostValidator,IValidator<CreatePostRequest> createPostValidator, IPostProducedMessagerService producer)
@@ -26,6 +33,11 @@ namespace TextPostsService.Controllers
             this.createPostValidator = createPostValidator;
             this.logger = logger;
             this.producer = producer;
+            createPostCounter = Metrics.CreateCounter("CreatePostCounter", "increments on creating post");
+            updatePostCounter = Metrics.CreateCounter("UpdatePostCounter", "increments on update post");
+            deletePostCounter = Metrics.CreateCounter("DeletePostCounter", "increments on delete post");
+            getPostCounter = Metrics.CreateCounter("GetPostCounter", "increments on getting post");
+            getUserPostsPageCounter = Metrics.CreateCounter("GetUserPostsPageCounter", "increments on getting users posts page");
         }
         /// <summary>
         /// Запрос на создание поста
@@ -35,6 +47,8 @@ namespace TextPostsService.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePost(CreatePostRequest request)
         {
+            createPostCounter.Inc();
+            createPostCounter.Publish();
             var validationResult = createPostValidator.Validate(request);
             if (validationResult.IsValid)
             {
@@ -65,6 +79,8 @@ namespace TextPostsService.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdatePost(UpdatePostRequest request)
         {
+            updatePostCounter.Inc();
+            updatePostCounter.Publish();
             var validationResult = updatePostValidator.Validate(request);
             if (validationResult.IsValid)
             {
@@ -92,6 +108,8 @@ namespace TextPostsService.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeletePost(int id)
         {
+            deletePostCounter.Inc();
+            deletePostCounter.Publish();
             if (id>-1)
             {
                 var userId = GetUserId();
@@ -118,6 +136,8 @@ namespace TextPostsService.Controllers
         [HttpGet]
         public async Task<IActionResult> GetPost(int id)
         {
+            getPostCounter.Inc();
+            getPostCounter.Publish();
             if (id > -1)
             {
                 var result = await postService.GetPost(id);
@@ -138,6 +158,8 @@ namespace TextPostsService.Controllers
         [HttpGet]
         public async Task<IActionResult> GetUserPostsPage(int page, int userId)
         {
+            getUserPostsPageCounter.Inc();
+            getUserPostsPageCounter.Publish();
             if (page <= -1)
             {
                 logger.LogWarning("Ошибка валидации при получении страницы с постами пользователя {userId}", userId);
