@@ -1,4 +1,12 @@
 services:
+    textpostsservice:
+        build: /TextPostsService/TextPostsService/
+        environment:
+            - ASPNETCORE_URLS=http://textpostsservice:4002;
+        networks:
+            - backend
+        depends_on:
+            - db
     userservice:
         build: /UserService/UserService/
         environment:
@@ -16,16 +24,13 @@ services:
     kafka:
         image: confluentinc/cp-kafka:latest
 
-        ports:
-            - "9092:9092"
-            - "9093:9093"
         environment:
             KAFKA_KRAFT_MODE: "true"
             KAFKA_PROCESS_ROLES: "controller,broker"
             KAFKA_NODE_ID: 1
             KAFKA_CONTROLLER_QUORUM_VOTERS: "1@kafka:9093"
             KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
-            KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+            KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
             KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT
             KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
             KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
@@ -35,6 +40,8 @@ services:
             KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
         volumes:
             - ./kafka-data:/var/lib/kafka/data
+        networks:
+            - backend
     db:
         container_name: postgres
         image: "postgres"
