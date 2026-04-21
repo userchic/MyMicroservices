@@ -15,6 +15,14 @@ services:
             - backend
         depends_on:
             - db
+    subscriptionsservice:
+        build: /SubscriptionsService/SubscriptionsService/
+        environment:
+            - ASPNETCORE_URLS=http://subscriptionsservice:4003;
+        networks:
+            - backend
+        depends_on:
+            - db
     apigateway:
         build: /ApiGateway/ApiGateway/
         ports:
