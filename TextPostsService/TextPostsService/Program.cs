@@ -2,6 +2,7 @@ using AuthService.SwaggerFilters;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
+using Prometheus;
 using Serilog;
 using TextPostsService.Abstractions;
 using TextPostsService.DataBase;
@@ -62,6 +63,9 @@ builder.Host.ConfigureLogging(logging =>
 .UseSerilog();
 
 var app = builder.Build();
+
+app.UseMetricServer();
+app.UseHttpMetrics();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

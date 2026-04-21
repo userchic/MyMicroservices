@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Prometheus;
 using SubscriptionsService.Abstractions;
 using System.Buffers;
 using System.IdentityModel.Tokens.Jwt;
@@ -13,6 +14,12 @@ namespace SubscriptionsService.Controllers
     public class SubscriptionsController:Controller
     {
         ISubscriptionsService _subsService;
+        Counter subscribeCounter;
+        Counter unsubscribeCounter;
+        Counter getSubscriptionsCounter;
+        Counter getSubscribersCounter;
+        Counter getIsSubscribedCounter;
+
         ILogger logger;
         public SubscriptionsController (ISubscriptionsService subsService,ILogger<SubscriptionsController> logger)
         {
@@ -28,6 +35,8 @@ namespace SubscriptionsService.Controllers
         [HttpGet]
         public IActionResult GetSubscriptions(int userId)
         {
+            getSubscriptionsCounter.Inc();
+            getSubscriptionsCounter.Publish();
             var subscriptions = _subsService.GetSubscriptions(userId);
             return Json(subscriptions);
         }
@@ -39,6 +48,8 @@ namespace SubscriptionsService.Controllers
         [HttpGet]
         public IActionResult GetSubscribers(int userId)
         {
+            getSubscribersCounter.Inc();
+            getSubscribersCounter.Publish();
             return Json((_subsService.GetSubscribers(userId)).ToArray());
         }
         /// <summary>
@@ -49,6 +60,8 @@ namespace SubscriptionsService.Controllers
         [HttpGet]
         public async Task<IActionResult> GetIsSubscribed(int targetUserId)
         {
+            getIsSubscribedCounter.Inc();
+            getIsSubscribedCounter.Publish();
             int? userId = GetUserId();
             if (!userId.HasValue)
             {
@@ -66,6 +79,8 @@ namespace SubscriptionsService.Controllers
         [HttpPost]
         public async Task<IActionResult> Subscribe(int targetId)
         {
+            subscribeCounter.Inc();
+            subscribeCounter.Publish();
             int? userId = GetUserId();
             if (!userId.HasValue)
             {
@@ -86,6 +101,8 @@ namespace SubscriptionsService.Controllers
         [HttpPost]
         public async Task<IActionResult> Unsubscribe(int targetId)
         {
+            unsubscribeCounter.Inc();
+            unsubscribeCounter.Publish();
             int? userId = GetUserId();
             if (!userId.HasValue)
             {
