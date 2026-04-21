@@ -237,7 +237,7 @@ namespace ApiGateway
                     {
                         "destination1",new DestinationConfig()
                         {
-                            Address="http://localhost:5035"
+                            Address="http://userservice:4001"
                         } 
                     }
                 }

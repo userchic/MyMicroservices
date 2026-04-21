@@ -1,4 +1,18 @@
 services:
+    userservice:
+        build: /UserService/UserService/
+        environment:
+            - ASPNETCORE_URLS=http://userservice:4001;
+        networks:
+            - backend
+        depends_on:
+            - db
+    apigateway:
+        build: /ApiGateway/ApiGateway/
+        ports:
+            - 8080:8080
+        networks:
+            - backend
     kafka:
         image: confluentinc/cp-kafka:latest
 
@@ -21,7 +35,19 @@ services:
             KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
         volumes:
             - ./kafka-data:/var/lib/kafka/data
+    db:
+        container_name: postgres
+        image: "postgres"
 
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: 123456
+            POSTGRES_HOST: db
+            POSTGRES_PORT: 5432
+        volumes:
+            - ./data:/var/lib/postgresql/data
+        networks:
+            - backend
 #    kafka-ui:
 #        image: provectuslabs/kafka-ui:latest
 #
