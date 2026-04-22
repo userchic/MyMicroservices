@@ -277,7 +277,7 @@ namespace ApiGateway
                     {
                         "destination1",new DestinationConfig()
                         {
-                            Address="http://localhost:5020"
+                            Address="http://notificationsservice:4004"
                         }
                     }
                 }

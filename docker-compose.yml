@@ -1,12 +1,4 @@
 services:
-    textpostsservice:
-        build: /TextPostsService/TextPostsService/
-        environment:
-            - ASPNETCORE_URLS=http://textpostsservice:4002;
-        networks:
-            - backend
-        depends_on:
-            - db
     userservice:
         build: /UserService/UserService/
         environment:
@@ -15,10 +7,28 @@ services:
             - backend
         depends_on:
             - db
+    textpostsservice:
+        build: /TextPostsService/TextPostsService/
+        environment:
+            - ASPNETCORE_URLS=http://textpostsservice:4002;
+        networks:
+            - backend
+        depends_on:
+            - db
     subscriptionsservice:
         build: /SubscriptionsService/SubscriptionsService/
         environment:
             - ASPNETCORE_URLS=http://subscriptionsservice:4003;
+        networks:
+            - backend
+        depends_on:
+            - db
+    notificationsservice:
+        build: /NotificationsService/NotificationsService/
+        environment:
+            - ASPNETCORE_URLS=http://notificationsservice:4004;
+        ports:
+            - 4004:4004
         networks:
             - backend
         depends_on:
