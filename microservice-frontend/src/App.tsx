@@ -31,7 +31,7 @@ function App() {
           <Menu theme="dark"
             mode="horizontal"
             items={isAuthenticated ? [
-              { key: "siteName", label: <Link to={"/"}>Минималичтичная соцсеть</Link> },
+              { key: "siteName", label: <Link to={"/"}>Минималистичная соцсеть</Link> },
               { key: "profile", label: <Link to={"/Profile"}>Профиль</Link> },
               { key: "tasks", label: <Link to={"/Profiles"}>Поиск профилей</Link> },
               { key: "norifications", label: <Link to={"/NotificationSettings"}>Настройка уведомлений</Link> },

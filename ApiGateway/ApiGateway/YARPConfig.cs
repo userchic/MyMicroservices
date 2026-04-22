@@ -237,7 +237,7 @@ namespace ApiGateway
                     {
                         "destination1",new DestinationConfig()
                         {
-                            Address="http://localhost:5035"
+                            Address="http://userservice:4001"
                         } 
                     }
                 }
@@ -251,7 +251,7 @@ namespace ApiGateway
                     {
                         "destination1",new DestinationConfig()
                         {
-                            Address="http://localhost:5198"
+                            Address="http://subscriptionsservice:4003"
                         }
                     }
                 }
@@ -264,7 +264,7 @@ namespace ApiGateway
                     {
                         "destination1",new DestinationConfig()
                         {
-                            Address="http://localhost:5164"
+                            Address="http://textpostsservice:4002"
                         }
                     }
                 }
@@ -277,7 +277,7 @@ namespace ApiGateway
                     {
                         "destination1",new DestinationConfig()
                         {
-                            Address="http://localhost:5020"
+                            Address="http://notificationsservice:4004"
                         }
                     }
                 }
