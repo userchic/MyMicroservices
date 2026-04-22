@@ -12,10 +12,11 @@ namespace NotificationsService.Consumer
 
         CancellationTokenSource cancellationSource;
         bool isConsuming = false;
-        public ConsumerService(INotificationsService notifService)
+	ILogger logger;
+        public ConsumerService(INotificationsService notifService,ILogger<ConsumerService> logger)
         {
             notificationsService = notifService;
-
+	    this.logger=logger;
         }
         public Result<string, string> StartConsuming(int partition)
         {
@@ -23,7 +24,7 @@ namespace NotificationsService.Consumer
                 return ((string)null).ToResult("Чтение сообщений уже происходит.");
             var config = new ConsumerConfig
             {
-                BootstrapServers = "localhost:9092",
+                BootstrapServers = "kafka:9092",
                 GroupId = "my-consumer-group",
                 AutoOffsetReset = AutoOffsetReset.Earliest
             };
@@ -52,7 +53,12 @@ namespace NotificationsService.Consumer
                 {
                     var consumeResult = _consumer.Consume(TimeSpan.FromSeconds(10));
                     if (consumeResult is not null)
+		    {
+			logger.LogInformation("Найдено сообщение");
                         notificationsService.NotifySubscribers(consumeResult.Message.Value);
+		    }
+		    else
+			logger.LogInformation("Сообщений не найдено");
                 }
             }
             catch (ConsumeException e)

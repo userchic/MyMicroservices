@@ -10,7 +10,7 @@ namespace AuthService.DataBase
         public UserContext(DbContextOptions<UserContext> options,ILogger<UserContext> logger): base(options)
         {
             //Database.EnsureDeleted();
-            //bool isCreated = Database.EnsureCreated();
+            bool isCreated = Database.EnsureCreated();
         }
         public DbSet<User> Users { get; set; }
     }

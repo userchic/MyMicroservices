@@ -1,17 +1,54 @@
 services:
+    userservice:
+        build: /UserService/UserService/
+        environment:
+            - ASPNETCORE_URLS=http://userservice:4001;
+        networks:
+            - backend
+        depends_on:
+            - db
+    textpostsservice:
+        build: /TextPostsService/TextPostsService/
+        environment:
+            - ASPNETCORE_URLS=http://textpostsservice:4002;
+        networks:
+            - backend
+        depends_on:
+            - db
+    subscriptionsservice:
+        build: /SubscriptionsService/SubscriptionsService/
+        environment:
+            - ASPNETCORE_URLS=http://subscriptionsservice:4003;
+        networks:
+            - backend
+        depends_on:
+            - db
+    notificationsservice:
+        build: /NotificationsService/NotificationsService/
+        environment:
+            - ASPNETCORE_URLS=http://notificationsservice:4004;
+        ports:
+            - 4004:4004
+        networks:
+            - backend
+        depends_on:
+            - db
+    apigateway:
+        build: /ApiGateway/ApiGateway/
+        ports:
+            - 8080:8080
+        networks:
+            - backend
     kafka:
         image: confluentinc/cp-kafka:latest
 
-        ports:
-            - "9092:9092"
-            - "9093:9093"
         environment:
             KAFKA_KRAFT_MODE: "true"
             KAFKA_PROCESS_ROLES: "controller,broker"
             KAFKA_NODE_ID: 1
             KAFKA_CONTROLLER_QUORUM_VOTERS: "1@kafka:9093"
             KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
-            KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+            KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
             KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT
             KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
             KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
@@ -21,7 +58,44 @@ services:
             KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
         volumes:
             - ./kafka-data:/var/lib/kafka/data
+        networks:
+            - backend
+    prometheus:
+        image: prom/prometheus:latest
+        volumes:
+            - ./prometheus/etc:/etc/prometheus/
+            - ./prometheus/data:/prometheus
+        command:
+            - --config.file=/etc/prometheus/prometheus.yml
+        ports:
+            - 9090:9090
+        networks:
+            - backend
+    grafana:
+        image: grafana/grafana
+        user: root
+        depends_on:
+            - prometheus
+        ports:
+            - 3000:3000
+        volumes:
+            - ./grafana:/var/lib/grafana
+            - ./grafana/provisioning/:/etc/grafana/provisioning/
+        networks:
+            - backend
+    db:
+        container_name: postgres
+        image: "postgres:17.0"
 
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: 123456
+            POSTGRES_HOST: db
+            POSTGRES_PORT: 5432
+        volumes:
+            - /data:/var/lib/postgresql/data
+        networks:
+            - backend
 #    kafka-ui:
 #        image: provectuslabs/kafka-ui:latest
 #

@@ -1,6 +1,6 @@
 import { signOut, store } from "../Store"
 
-export let GatewayUrl = "http://192.168.1.163:3000"
+export let GatewayUrl = "http://localhost:8080"
 
 export function GetToken(): string | undefined {
     let tokenCookie = document.cookie.split(" ").find((cookie) => {

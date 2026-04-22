@@ -25,6 +25,11 @@ namespace SubscriptionsService.Controllers
         {
             _subsService = subsService;
             logger= logger;
+            subscribeCounter = Metrics.CreateCounter("SubscribeCounter","increments on subscribing");
+            unsubscribeCounter = Metrics.CreateCounter("UnsubscribeCounter","increments on unsubscribing");
+            getSubscriptionsCounter = Metrics.CreateCounter("GetSubscriptionsCounter","increments on getting subscriptions");
+            getSubscribersCounter = Metrics.CreateCounter("GetSubscribersCounter","increments on getting subscribers");
+            getIsSubscribedCounter = Metrics.CreateCounter("GetIsSubscribedCounter","increments on getting isSubscribed");
         }
 
         /// <summary>
