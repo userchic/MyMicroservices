@@ -60,9 +60,32 @@ services:
             - ./kafka-data:/var/lib/kafka/data
         networks:
             - backend
+    prometheus:
+        image: prom/prometheus:latest
+        volumes:
+            - ./prometheus/etc:/etc/prometheus/
+            - ./prometheus/data:/prometheus
+        command:
+            - --config.file=/etc/prometheus/prometheus.yml
+        ports:
+            - 9090:9090
+        networks:
+            - backend
+    grafana:
+        image: grafana/grafana
+        user: root
+        depends_on:
+            - prometheus
+        ports:
+            - 3000:3000
+        volumes:
+            - ./grafana:/var/lib/grafana
+            - ./grafana/provisioning/:/etc/grafana/provisioning/
+        networks:
+            - backend
     db:
         container_name: postgres
-        image: "postgres"
+        image: "postgres:17.0"
 
         environment:
             POSTGRES_USER: postgres
@@ -70,7 +93,7 @@ services:
             POSTGRES_HOST: db
             POSTGRES_PORT: 5432
         volumes:
-            - ./data:/var/lib/postgresql/data
+            - /data:/var/lib/postgresql/data
         networks:
             - backend
 #    kafka-ui:
