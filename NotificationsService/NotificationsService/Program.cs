@@ -9,6 +9,7 @@ using NotificationsService.DTO;
 using NotificationsService.Repositories;
 using NotificationsService.Services;
 using NotificationsService.Validators;
+using Prometheus;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -65,6 +66,9 @@ builder.Host.ConfigureLogging(logging =>
 .UseSerilog(); 
 
 var app = builder.Build();
+
+app.UseMetricServer();
+app.UseHttpMetrics();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

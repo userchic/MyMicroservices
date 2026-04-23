@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using NotificationsService.Abstractions;
 using NotificationsService.DTO;
 using NotificationsService.Models;
+using Prometheus;
 using System.IdentityModel.Tokens.Jwt;
 
 namespace NotificationsService.Controllers
@@ -14,6 +15,11 @@ namespace NotificationsService.Controllers
         IPersonalNotificationRulesService personalNotificationService;
         IValidator<CreateNotificationRulesRequest> createRequestValidator;
         IValidator<UpdateNotificationRulesRequest> updateRequestValidator;
+        Counter createRuleCounter;
+        Counter updateRuleCounter;
+        Counter deleteRuleCounter;
+        Counter getRuleCounter;
+
         ILogger logger;
 
         public PersonalNotificationsController(IValidator<UpdateNotificationRulesRequest> updateRequestValidator,IValidator<CreateNotificationRulesRequest> createRequestValidator,IPersonalNotificationRulesService personalNotifService,ILogger<PersonalNotificationsController> logger)
@@ -22,6 +28,10 @@ namespace NotificationsService.Controllers
             personalNotificationService = personalNotifService;
             this.createRequestValidator = createRequestValidator;
             this.updateRequestValidator = updateRequestValidator;
+            createRuleCounter = Metrics.CreateCounter("createRuleCounter","increments on creating rule");
+            updateRuleCounter = Metrics.CreateCounter("updateRuleCounter", "increments on updating rule");
+            deleteRuleCounter = Metrics.CreateCounter("deleteRuleCounter", "increments on deleting rule");
+            getRuleCounter = Metrics.CreateCounter("getRuleCounter", "increments on getting rule");
         }
         /// <summary>
         /// Запрос правила уведомления пользователя
@@ -33,6 +43,8 @@ namespace NotificationsService.Controllers
         [HttpGet]
         public async Task<IActionResult> GetPersonalNotificationsRule()
         {
+            getRuleCounter.Inc();
+            getRuleCounter.Publish();
             int? userId = GetUserId();
             if (!userId.HasValue)
             {
@@ -56,6 +68,8 @@ namespace NotificationsService.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePersonalNotificationsRules(CreateNotificationRulesRequest request)
         {
+            createRuleCounter.Inc();
+            createRuleCounter.Publish();
             var validationRes = createRequestValidator.Validate(request);
             if (!validationRes.IsValid)
                 return Json(new { errors = validationRes.Errors });
@@ -82,6 +96,8 @@ namespace NotificationsService.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdatePersonalNotificationsRules(UpdateNotificationRulesRequest request)
         {
+            updateRuleCounter.Inc();
+            updateRuleCounter.Publish();
             var validationRes = updateRequestValidator.Validate(request);
             if (!validationRes.IsValid)
                 return Json(new { errors = validationRes.Errors });
@@ -107,6 +123,8 @@ namespace NotificationsService.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeletePersonalNotificationsRules()
         {
+            deleteRuleCounter.Inc();
+            deleteRuleCounter.Publish();
             int? userId = GetUserId();
             if (!userId.HasValue)
             {
