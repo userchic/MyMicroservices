@@ -8,8 +8,8 @@ namespace AuthService.Services
     public class UserService : IUserService
     {
         IUserRepository _userRep;
-        ILogger logger;
-        public UserService(IUserRepository userrep,ILogger<UserService> logger)
+        ILogger? logger;
+        public UserService(IUserRepository userrep,ILogger<UserService>? logger)
         {
             _userRep = userrep;
             this.logger = logger;
@@ -19,16 +19,16 @@ namespace AuthService.Services
             var user = await _userRep.Get(request.Login);
             if (user is null)
             {
-                logger.LogWarning("При попытке логина не найден пользователь с  логином {Login}.", request.Login);
+                logger?.LogWarning("При попытке логина не найден пользователь с  логином {Login}.", request.Login);
                 return user.ToResult("Не найден пользователь с таким логином.");
             }
             if (user.Password != request.Password)
             {
-                logger.LogWarning("При попытке логина с  логином {Login} введен неправильный пароль {Password}.", request.Login, request.Password);
+                logger?.LogWarning("При попытке логина с  логином {Login} введен неправильный пароль {Password}.", request.Login, request.Password);
                 User? response = null;
                 return response.ToResult("Неправильный пароль.");
             }
-            logger.LogInformation("Успешно вошел в систему {Login}", request.Login);
+            logger?.LogInformation("Успешно вошел в систему {Login}", request.Login);
             return user;
         }
 
@@ -37,13 +37,13 @@ namespace AuthService.Services
             var user = await _userRep.Get(request.Login);
             if (user is not null)
             {
-                logger.LogWarning("При попытке регистрации указан существующий логин {Login}",request.Login);
+                logger?.LogWarning("При попытке регистрации указан существующий логин {Login}",request.Login);
                 user = null;
                 return user.ToResult("Пользователь с таким логином уже существует.");
             }
             user = await _userRep.Create(User.Create(request));
             await _userRep.Save();
-            logger.LogInformation("Успешно зарегистрирован в систему {Login}", request.Login);
+            logger?.LogInformation("Успешно зарегистрирован в систему {Login}", request.Login);
             return user;
         }
         
@@ -72,7 +72,7 @@ namespace AuthService.Services
 
             if (await _userRep.Get(request.Login) is not null)
             {
-                logger.LogWarning("Попытка изменить логин пользователя {Id} на существующий логин {Login}", user.Id,request.Login);
+                logger?.LogWarning("Попытка изменить логин пользователя {Id} на существующий логин {Login}", user.Id,request.Login);
                 User nullUser = null;
                 return nullUser.ToResult("Пользователь с этим логином уже существует");
             }
@@ -86,7 +86,7 @@ namespace AuthService.Services
             getUserResult.Birthday = updatedUser.Birthday;
             _userRep.Update(getUserResult);
             await _userRep.Save();
-            logger.LogInformation("Успешно изменен профиль с идентификатором {Id}", user.Id);
+            logger?.LogInformation("Успешно изменен профиль с идентификатором {Id}", user.Id);
             return updatedUser;
         }
     }

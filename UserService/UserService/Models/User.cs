@@ -27,5 +27,20 @@ namespace AuthService.Models
                 Password=request.Password
             };
         }
+        public override bool Equals(object? obj)
+        {
+            if (obj is User)
+            {
+                User user = (User)obj;
+                return user.Login==Login &&
+                    user.Password==Password &&
+                    user.Name==Name &&
+                    user.Surname==Surname &&
+                    user.Fatname==Fatname &&
+                    user.Email==Email &&
+                    user.Birthday==Birthday;
+            }
+            return false;
+        }
     }
 }

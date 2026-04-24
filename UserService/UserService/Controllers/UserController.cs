@@ -32,10 +32,10 @@ namespace AuthService.Controllers
         Counter getProfileByIdCounter;
         Counter getProfilesCounter;
         Counter changeProfileCounter;
-        ILogger logger;
+        ILogger? logger;
         IMemoryCache usersCache;
         public UserController(IUserService userservice, IValidator<LoginRequest> loginvalidator, IValidator<RegistryRequest> registryvalidator, IValidator<ChangeProfileRequest> changeprofilevalidator,
-            ILogger<UserController> logger,IMemoryCache cache)
+            ILogger<UserController>? logger,IMemoryCache cache)
         {
             _userService = userservice;
             loginValidator = loginvalidator;
@@ -76,7 +76,7 @@ namespace AuthService.Controllers
                 else
                     return Json(new { error = loginResult.Error });
             }
-            logger.LogWarning("Ошибки валидации запроса на вход в систему {Count}шт", result.Errors.Count);
+            logger?.LogWarning("Ошибки валидации запроса на вход в систему {Count}шт", result.Errors.Count);
             return Json(new { errors = result.Errors.Select(error=>error.ToString()) });
         }
         /// <summary>
@@ -106,7 +106,7 @@ namespace AuthService.Controllers
                 else
                     return Json(new { error = loginResult.Error });
             }
-            logger.LogWarning("Ошибки валидации запроса на регистрацию в систему {Count}шт", result.Errors.Count);
+            logger?.LogWarning("Ошибки валидации запроса на регистрацию в систему {Count}шт", result.Errors.Count);
             return Json(new { errors = result.Errors.Select(error => error.ToString()) });
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace AuthService.Controllers
             getProfileCounter.Publish();
             if (string.IsNullOrEmpty(login))
             {
-                logger.LogWarning("Ошибки валидации запроса профиля по Login - {Count}шт", 1);
+                logger?.LogWarning("Ошибки валидации запроса профиля по Login - {Count}шт", 1);
                 return Json(new { error = "Логин не введен, введите логин" });
             }
             User cacheProfile;
@@ -156,7 +156,7 @@ namespace AuthService.Controllers
             getProfileByIdCounter.Publish();
             if (userId<=-1)
             {
-                logger.LogWarning("Ошибки валидации запроса профиля по Id - {Count}шт", 1);
+                logger?.LogWarning("Ошибки валидации запроса профиля по Id - {Count}шт", 1);
                 return Json(new { error = "Идентификатор не может быть меньше 0" });
             }
             var loginResult = await _userService.GetProfile(userId);
@@ -199,13 +199,13 @@ namespace AuthService.Controllers
             int? userId = GetUserId();
             if (!userId.HasValue)
             {
-                logger.LogWarning("Не распознан Id пользователя {userId}", userId.Value);
+                logger?.LogWarning("Не распознан Id пользователя {userId}", userId.Value);
                 return Json(new { error = "Идентификатор пользователя не распознан" });
             }
             var getUserResult = await _userService.GetProfile(userId.Value);
             if (getUserResult.IsFailure)
             {
-                logger.LogWarning("При попытке изменить профиль получен не существующий Id - {userId}", userId.Value);
+                logger?.LogWarning("При попытке изменить профиль получен не существующий Id - {userId}", userId.Value);
                 return Json(new { error = "Идентификатор пользователя не соответствует какому либо пользователю" });
             }
             var result = await changeProfileValidator.ValidateAsync(request);
@@ -219,7 +219,7 @@ namespace AuthService.Controllers
                 else
                     return Json(new { error = loginResult.Error });
             }
-            logger.LogWarning("Ошибки валидации запроса на редактирование профиля {Login} - {Count}шт", getUserResult.Value.Login,result.Errors.Count);
+            logger?.LogWarning("Ошибки валидации запроса на редактирование профиля {Login} - {Count}шт", getUserResult.Value.Login, result.Errors.Count);
             return Json(new { errors = result.Errors.Select(error => error.ToString()) });
         }
         private string CreateToken(User user)
@@ -261,7 +261,7 @@ namespace AuthService.Controllers
             }
             catch
             {
-                logger.LogError("Кажется получен некорректный userId или его нет");
+                logger?.LogError("Кажется получен некорректный userId или его нет");
                 return null;
             }
         }
