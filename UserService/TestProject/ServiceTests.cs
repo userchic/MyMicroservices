@@ -195,7 +195,7 @@ namespace TestProject
         {
             ImplyTest((context, service) =>
             {
-                ///Arrange
+                //Arrange
                 RegistryRequest request = new RegistryRequest()
                 {
                     Login = login,

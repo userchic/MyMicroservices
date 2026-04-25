@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5D80E708-ADD2-4130-8BCA-BD7960D8A27E}|TestProject\\TestProject.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\testproject\\servicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D80E708-ADD2-4130-8BCA-BD7960D8A27E}|TestProject\\TestProject.csproj|solutionrelative:testproject\\servicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D80E708-ADD2-4130-8BCA-BD7960D8A27E}|TestProject\\TestProject.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\testproject\\validationtesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D80E708-ADD2-4130-8BCA-BD7960D8A27E}|TestProject\\TestProject.csproj|solutionrelative:testproject\\validationtesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5D80E708-ADD2-4130-8BCA-BD7960D8A27E}|TestProject\\TestProject.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\testproject\\controllertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D80E708-ADD2-4130-8BCA-BD7960D8A27E}|TestProject\\TestProject.csproj|solutionrelative:testproject\\controllertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,16 +19,8 @@
       "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D80E708-ADD2-4130-8BCA-BD7960D8A27E}|TestProject\\TestProject.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\testproject\\servicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D80E708-ADD2-4130-8BCA-BD7960D8A27E}|TestProject\\TestProject.csproj|solutionrelative:testproject\\servicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|solutionrelative:userservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D80E708-ADD2-4130-8BCA-BD7960D8A27E}|TestProject\\TestProject.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\testproject\\validationtesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D80E708-ADD2-4130-8BCA-BD7960D8A27E}|TestProject\\TestProject.csproj|solutionrelative:testproject\\validationtesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{71661A73-F911-7230-1C49-5DB460ECAFA2}|UserService\\AuthService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\userservice\\userservice\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,32 +66,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Program.cs",
-              "RelativeDocumentMoniker": "UserService\\Program.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Program.cs",
-              "RelativeToolTip": "UserService\\Program.cs",
+              "DocumentIndex": 9,
+              "Title": "LoginRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Validators\\LoginRequestValidator.cs",
+              "RelativeDocumentMoniker": "UserService\\Validators\\LoginRequestValidator.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Validators\\LoginRequestValidator.cs",
+              "RelativeToolTip": "UserService\\Validators\\LoginRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T06:17:04.479Z",
+              "WhenOpened": "2026-04-23T11:38:34.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\TestProject\\ControllerTests.cs",
+              "RelativeDocumentMoniker": "TestProject\\ControllerTests.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\TestProject\\ControllerTests.cs",
+              "RelativeToolTip": "TestProject\\ControllerTests.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAqwDIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T10:13:52.459Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "UserService\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Services\\UserService.cs",
-              "RelativeToolTip": "UserService\\Services\\UserService.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAcwE4AAAA0AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ValidationTesting.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\TestProject\\ValidationTesting.cs",
+              "RelativeDocumentMoniker": "TestProject\\ValidationTesting.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\TestProject\\ValidationTesting.cs",
+              "RelativeToolTip": "TestProject\\ValidationTesting.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAE4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T12:18:53.85Z"
+              "WhenOpened": "2026-04-23T10:14:28.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\TestProject\\ServiceTests.cs",
+              "RelativeDocumentMoniker": "TestProject\\ServiceTests.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\TestProject\\ServiceTests.cs",
+              "RelativeToolTip": "TestProject\\ServiceTests.cs",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAcwMUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T10:00:24.556Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -107,15 +133,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LoginRequestValidator.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Validators\\LoginRequestValidator.cs",
-              "RelativeDocumentMoniker": "UserService\\Validators\\LoginRequestValidator.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Validators\\LoginRequestValidator.cs",
-              "RelativeToolTip": "UserService\\Validators\\LoginRequestValidator.cs",
+              "DocumentIndex": 5,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "UserService\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Services\\UserService.cs",
+              "RelativeToolTip": "UserService\\Services\\UserService.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAcwE4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T12:18:53.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Program.cs",
+              "RelativeDocumentMoniker": "UserService\\Program.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Program.cs",
+              "RelativeToolTip": "UserService\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T11:38:34.857Z"
+              "WhenOpened": "2026-04-24T06:17:04.479Z"
             },
             {
               "$type": "Document",
@@ -131,46 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ValidationTesting.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\TestProject\\ValidationTesting.cs",
-              "RelativeDocumentMoniker": "TestProject\\ValidationTesting.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\TestProject\\ValidationTesting.cs",
-              "RelativeToolTip": "TestProject\\ValidationTesting.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T10:14:28.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\TestProject\\ControllerTests.cs",
-              "RelativeDocumentMoniker": "TestProject\\ControllerTests.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\TestProject\\ControllerTests.cs",
-              "RelativeToolTip": "TestProject\\ControllerTests.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAqwDIAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T10:13:52.459Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\TestProject\\ServiceTests.cs",
-              "RelativeDocumentMoniker": "TestProject\\ServiceTests.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\TestProject\\ServiceTests.cs",
-              "RelativeToolTip": "TestProject\\ServiceTests.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAAcwCkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T10:00:24.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\UserService\\UserService\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "UserService\\Controllers\\UserController.cs",
@@ -178,8 +177,7 @@
               "RelativeToolTip": "UserService\\Controllers\\UserController.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAcwD4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T13:51:43.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T13:51:43.868Z"
             },
             {
               "$type": "Document",
