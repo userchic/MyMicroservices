@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TextPostsService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd8e4ff9b2a84348eb5a13422254062d0834bf27")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d2e9646853410c388264a91c6235d418fc45f9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TextPostsService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TextPostsService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
