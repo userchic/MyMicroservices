@@ -96,3 +96,5 @@ C:\Users\Руслан Габзалилов\Desktop\myMicroservices\Notifications
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\NotificationsService\NotificationsService\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\NotificationsService\NotificationsService\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\NotificationsService\NotificationsService\obj\Debug\net8.0\NotificationsService.xml
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\NotificationsService\NotificationsService\bin\Debug\net8.0\Prometheus.NetStandard.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\NotificationsService\NotificationsService\bin\Debug\net8.0\Prometheus.AspNetCore.dll
