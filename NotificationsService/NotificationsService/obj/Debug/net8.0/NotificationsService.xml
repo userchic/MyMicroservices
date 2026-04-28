@@ -57,5 +57,25 @@
             Каждый пользователь может иметь только одно правило, это проверяется в реализации запросов.
             </remarks>
         </member>
+        <member name="P:NotificationsService.DTO.CreateNotificationRulesRequest.NotificationService">
+            <summary>
+            Сервис уведомлений
+            </summary>
+        </member>
+        <member name="P:NotificationsService.DTO.CreateNotificationRulesRequest.InternalServiceIdentificator">
+            <summary>
+            идентификатор пользователя в рамках сервиса
+            </summary>
+        </member>
+        <member name="P:NotificationsService.DTO.UpdateNotificationRulesRequest.NotificationService">
+            <summary>
+            Сервис уведомлений
+            </summary>
+        </member>
+        <member name="P:NotificationsService.DTO.UpdateNotificationRulesRequest.InternalServiceIdentificator">
+            <summary>
+            идентификатор пользователя в рамках сервиса
+            </summary>
+        </member>
     </members>
 </doc>

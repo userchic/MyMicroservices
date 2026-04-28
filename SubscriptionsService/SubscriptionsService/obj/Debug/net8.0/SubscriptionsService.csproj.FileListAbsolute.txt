@@ -65,3 +65,5 @@ C:\Users\Руслан Габзалилов\Desktop\myMicroservices\Subscriptions
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\SubscriptionsService.xml
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\obj\Debug\net8.0\SubscriptionsService.xml
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\Prometheus.NetStandard.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\SubscriptionsService\SubscriptionsService\bin\Debug\net8.0\Prometheus.AspNetCore.dll

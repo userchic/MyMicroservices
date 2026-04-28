@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="NotificationsService/NotificationsService.csproj" />
+  <Project Path="TestProject/TestProject.csproj" Id="c1ec2e18-dee0-4abd-99b0-982cffc17bf4" />
 </Solution>
