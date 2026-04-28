@@ -18,5 +18,17 @@ namespace TextPostsService.Model
                 UserId = userId
             };
         }
+        public override bool Equals(object? obj)
+        {
+            if (obj is TextPost)
+            {
+                TextPost post = (TextPost)obj;
+                return post.Id==Id &&
+                    post.Text==Text &&
+                    post.UserId==UserId &&
+                    post.PostTime==PostTime;
+            }
+            return false;
+        }
     }
 }

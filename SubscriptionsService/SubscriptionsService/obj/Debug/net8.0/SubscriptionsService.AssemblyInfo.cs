@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SubscriptionsService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75a4db384e59e68cd8bba4ec791c624cea1179c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d2e9646853410c388264a91c6235d418fc45f9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SubscriptionsService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SubscriptionsService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

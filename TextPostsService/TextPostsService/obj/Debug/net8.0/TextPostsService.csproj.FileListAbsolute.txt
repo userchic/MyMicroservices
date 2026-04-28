@@ -91,3 +91,5 @@ C:\Users\Руслан Габзалилов\Desktop\myMicroservices\TextPostsServ
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\TextPostsService\TextPostsService\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\TextPostsService\TextPostsService\bin\Debug\net8.0\TextPostsService.xml
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\TextPostsService\TextPostsService\obj\Debug\net8.0\TextPostsService.xml
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\TextPostsService\TextPostsService\bin\Debug\net8.0\Prometheus.NetStandard.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\TextPostsService\TextPostsService\bin\Debug\net8.0\Prometheus.AspNetCore.dll
