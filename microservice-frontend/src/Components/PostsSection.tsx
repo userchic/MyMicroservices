@@ -3,7 +3,7 @@ import { RequestCreatePost, RequestDeletePost, RequestGetUserPostsPage, RequestU
 import { type Post } from "../Models/Post"
 import TextArea from "antd/es/input/TextArea"
 import PostInfo from "./PostInfo"
-
+import InputEmoji from "react-input-emoji"
 
 interface Props {
     ProfileId: number,
@@ -81,7 +81,7 @@ export default function PostsSection({ ProfileId, IsProfileOwner }: Props) {
             {IsProfileOwner ?
                 <>
                     <h3>Напишите новый пост</h3>
-                    <TextArea cols={100} rows={2} value={NewPostText} onChange={(event) => setNewPostText(event.target.value)} />
+                    <InputEmoji value={NewPostText} onChange={(string) => setNewPostText(string)} shouldReturn={true} shouldConvertEmojiToImage={false} />
                     <input type="button" onClick={CreatePost} value="Опубликовать" /><br />
                 </> : null}
             {Message}
