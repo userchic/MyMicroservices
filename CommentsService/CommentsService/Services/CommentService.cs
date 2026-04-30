@@ -8,8 +8,8 @@ namespace CommentsService.Services
     public class CommentService : ICommentService
     {
         ICommentsRepository _commentsRepository;
-        ILogger logger;
-        public CommentService (ICommentsRepository commentsRepository,ILogger<CommentService> logger)
+        ILogger? logger;
+        public CommentService (ICommentsRepository commentsRepository,ILogger<CommentService>? logger)
         {
             _commentsRepository = commentsRepository;
             this.logger = logger;
@@ -18,11 +18,16 @@ namespace CommentsService.Services
         {
             Comment newComment = new Comment() { CreationTime=DateTime.Now,PostId= request.PostId, Text= request.Text, OwnerUserId=userId};
             await _commentsRepository.CreateComment(newComment);
+            await _commentsRepository.Save();
             return newComment;
         }
         public ICollection<Comment> GetCommentsPage(int postId, int page)
         {
             return _commentsRepository.GetCommentsPage(postId, page);
+        }
+        public Comment? GetComment(int commentId)
+        {
+            return _commentsRepository.GetComment(commentId);
         }
         public async Task<Result<string, string>> UpdateComment(UpdateCommentRequest request,int userId)
         {
@@ -59,5 +64,7 @@ namespace CommentsService.Services
             await _commentsRepository.Save();
             return "Успешно удален комментарий".ToResult("Тут всё должно быть нормально");
         }
+
+
     }
 }

@@ -7,6 +7,8 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace CommentsService.Controllers
 {
+    [ApiController]
+    [Route("/[controller]/[action]")]
     public class CommentsController : Controller
     {
         ILogger? logger;

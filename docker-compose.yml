@@ -33,6 +33,16 @@ services:
             - backend
         depends_on:
             - db
+    commentsservice:
+        build: /CommentsService/CommentsService/
+        environment:
+            - ASPNETCORE_URLS=http://commentsservice:4005;
+        ports:
+            - 4005:4005
+        networks:
+            - backend
+        depends_on:
+            - db
     apigateway:
         build: /ApiGateway/ApiGateway/
         ports:

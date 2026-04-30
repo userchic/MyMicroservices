@@ -1,0 +1,210 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "PostsAPI",
+    "description": "API от микросервиса постов",
+    "contact": {
+      "name": "Ruslan",
+      "url": "https://github.com/userchic"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/Comments/GetCommentsPage": {
+      "get": {
+        "tags": [
+          "Comments"
+        ],
+        "summary": "Запрос на получение страницы комментариев под конкретным постом",
+        "parameters": [
+          {
+            "name": "postId",
+            "in": "query",
+            "description": "Идентификатор поста",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Нужная страница",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Comments/CreateComment": {
+      "post": {
+        "tags": [
+          "Comments"
+        ],
+        "summary": "Запрос на создание коментария под конкретным постом от своего имени.",
+        "parameters": [
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "контракт о создании комментария",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCommentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCommentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCommentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Comments/UpdateComment": {
+      "put": {
+        "tags": [
+          "Comments"
+        ],
+        "summary": "Запрос на изменение конкретного комментария",
+        "parameters": [
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Контракт на изменение комментария",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Comments/DeleteComment": {
+      "delete": {
+        "tags": [
+          "Comments"
+        ],
+        "summary": "Запрос на удаление комментария",
+        "parameters": [
+          {
+            "name": "commentId",
+            "in": "query",
+            "description": "Идентификатор комментария",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "MyAuth",
+            "in": "header",
+            "description": "JWT токен",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreateCommentRequest": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "postId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCommentRequest": {
+        "type": "object",
+        "properties": {
+          "newText": {
+            "type": "string",
+            "nullable": true
+          },
+          "commentId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Comments"
+    }
+  ]
+}

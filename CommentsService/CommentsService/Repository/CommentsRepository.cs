@@ -16,6 +16,10 @@ namespace CommentsService.Repository
             await context.Comments.AddAsync(newComment);
             return newComment;
         }
+        public Comment? GetComment(int commentId)
+        {
+            return context.Comments.FirstOrDefault((comment) => comment.Id == commentId);
+        }
         public ICollection<Comment> GetCommentsPage(int postId, int page)
         {
             return context.Comments.Where((comment) => comment.PostId == postId).Skip((page-1)*10).Take(10).ToArray();
@@ -32,5 +36,7 @@ namespace CommentsService.Repository
         {
             await context.SaveChangesAsync();
         }
+
+
     }
 }
