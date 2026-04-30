@@ -193,3 +193,8 @@
   border-radius: 30px;
   margin: 10px
 }
+
+.no-margin-block {
+  display: block;
+  border: 1px solid gray;
+}
