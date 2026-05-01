@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CommentsService</name>
+    </assembly>
+    <members>
+        <member name="M:CommentsService.Controllers.CommentsController.GetCommentsPage(System.Int32,System.Int32)">
+            <summary>
+            Запрос на получение страницы комментариев под конкретным постом
+            </summary>
+            <param name="postId">Идентификатор поста</param>
+            <param name="page">Нужная страница</param>
+            <returns>Возвращает посты, либо error</returns>
+        </member>
+        <member name="M:CommentsService.Controllers.CommentsController.CreateComment(CommentsService.Dto.CreateCommentRequest)">
+            <summary>
+            Запрос на создание коментария под конкретным постом от своего имени.
+            </summary>
+            <param name="request">контракт о создании комментария</param>
+            <returns>Возвращает новые комментарий, либо errors или error</returns>
+        </member>
+        <member name="M:CommentsService.Controllers.CommentsController.UpdateComment(CommentsService.Dto.UpdateCommentRequest)">
+            <summary>
+            Запрос на изменение конкретного комментария
+            </summary>
+            <param name="request">Контракт на изменение комментария</param>
+            <returns>Возвращает message при успехе, либо errors или error</returns>
+        </member>
+        <member name="M:CommentsService.Controllers.CommentsController.DeleteComment(System.Int32)">
+            <summary>
+            Запрос на удаление комментария
+            </summary>
+            <param name="commentId">Идентификатор комментария</param>
+            <returns>Возвращает message в случае успеха, либо errors или error</returns>
+        </member>
+    </members>
+</doc>

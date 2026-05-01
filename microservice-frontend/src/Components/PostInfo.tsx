@@ -2,6 +2,7 @@ import { useState } from "react"
 import type { Post } from "../Models/Post"
 import type { ModeType } from "antd/es/color-picker/interface"
 import TextArea from "antd/es/input/TextArea"
+import CommentSection from "./CommentSection"
 
 interface Props {
     post: Post,
@@ -18,6 +19,7 @@ export default function PostInfo({ deletePost, updatePost, post: post, isOwned }
 
     const [Text, setText] = useState(post.text)
     const [State, setState] = useState<Mode>(Mode.Read)
+    const [IsCommentsOpen, setIsCommentsOpen] = useState(false)
     function changeMode() {
         if (isOwned) {
             if (State == Mode.Read) setState(Mode.Update)
@@ -27,6 +29,10 @@ export default function PostInfo({ deletePost, updatePost, post: post, isOwned }
             }
         }
     }
+    function OpenCloseComments(): void {
+        setIsCommentsOpen(!IsCommentsOpen)
+    }
+
     return (
         <>
             <div style={{ display: "flex" }}>
@@ -57,6 +63,14 @@ export default function PostInfo({ deletePost, updatePost, post: post, isOwned }
                     </div>
 
                 </div>
+                <br />
+            </div>
+            <div>
+                <input type="button" value="Комментарии" onClick={OpenCloseComments} />
+                {
+                    IsCommentsOpen ?
+                        <CommentSection postId={post.id} /> : null
+                }
             </div>
         </>
     )
