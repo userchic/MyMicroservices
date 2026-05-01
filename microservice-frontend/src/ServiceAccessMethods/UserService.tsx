@@ -67,6 +67,13 @@ export async function RequestGetProfile(login: string) {
     })
     return await res.json()
 }
+export async function RequestGetProfileById(userId: number) {
+    let request = requestBase + "GetProfileById" + "?" + "userId=" + userId
+    let res = await fetch(request, {
+        method: "Get",
+    })
+    return await res.json()
+}
 export async function RequestGetProfiles(login?: string, name?: string, surname?: string, fatname?: string) {
     let request = requestBase + "GetProfiles" + "?"
     if (login !== "")

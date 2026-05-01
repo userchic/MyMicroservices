@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CommentsService/CommentsService.csproj" />
+  <Project Path="TestProject/TestProject.csproj" Id="907691db-3047-4be4-94a1-c37ceace145d" />
+</Solution>

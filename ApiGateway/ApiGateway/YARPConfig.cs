@@ -225,6 +225,50 @@ namespace ApiGateway
                 },
                 AuthorizationPolicy="Bearer"
             },
+            new RouteConfig()
+            {
+                RouteId="GetCommentsPage",
+                ClusterId="Comments",
+                Match=new RouteMatch()
+                {
+                    Path ="/Comments/GetCommentsPage",
+                    Methods=new List<string>() { "Get" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="CreateComment",
+                ClusterId="Comments",
+                Match=new RouteMatch()
+                {
+                    Path ="/Comments/CreateComment",
+                    Methods=new List<string>() { "Post" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="UpdateComment",
+                ClusterId="Comments",
+                Match=new RouteMatch()
+                {
+                    Path ="/Comments/UpdateComment",
+                    Methods=new List<string>() { "Put"},
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="DeleteComment",
+                ClusterId="Comments",
+                Match=new RouteMatch()
+                {
+                    Path ="/Comments/DeleteComment",
+                    Methods=new List<string>() { "Delete"},
+                },
+                AuthorizationPolicy="Bearer"
+            },
         };
         public static IReadOnlyList<ClusterConfig> Clusters = new List<ClusterConfig>()
         {
@@ -278,6 +322,19 @@ namespace ApiGateway
                         "destination1",new DestinationConfig()
                         {
                             Address="http://notificationsservice:4004"
+                        }
+                    }
+                }
+            },
+            new ClusterConfig()
+            {
+                ClusterId="Comments",
+                Destinations=new Dictionary<string, DestinationConfig>()
+                {
+                    {
+                        "destination1",new DestinationConfig()
+                        {
+                            Address="http://commentsservice:4005"
                         }
                     }
                 }
