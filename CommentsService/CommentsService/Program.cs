@@ -1,8 +1,11 @@
 using CommentsService.Abstractions;
 using CommentsService.DataBase;
+using CommentsService.Dto;
 using CommentsService.Repository;
 using CommentsService.Services;
 using CommentsService.SwaggerFilters;
+using CommentsService.Validators;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 using Prometheus;
@@ -41,6 +44,8 @@ builder.Services.AddDbContext<CommentsContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddScoped<IValidator<CreateCommentRequest>, CreateCommentRequestValidator>();
+builder.Services.AddScoped<IValidator<UpdateCommentRequest>, UpdateCommentRequestValidator>();
 builder.Services.AddScoped<ICommentService, CommentService>();
 builder.Services.AddScoped<ICommentsRepository,CommentsRepository>();
 

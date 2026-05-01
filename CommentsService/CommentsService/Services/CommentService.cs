@@ -16,7 +16,7 @@ namespace CommentsService.Services
         }
         public async Task<Comment> AddComment(CreateCommentRequest request, int userId)
         {
-            Comment newComment = new Comment() { CreationTime=DateTime.Now,PostId= request.PostId, Text= request.Text, OwnerUserId=userId};
+            Comment newComment = new Comment() { CreationTime=DateTime.Now.ToUniversalTime(),PostId= request.PostId, Text= request.Text, OwnerUserId=userId};
             await _commentsRepository.CreateComment(newComment);
             await _commentsRepository.Save();
             return newComment;
