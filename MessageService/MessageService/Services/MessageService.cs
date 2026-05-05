@@ -1,0 +1,70 @@
+﻿using CSharpFunctionalExtensions;
+using MessageService.Abstractions;
+using MessageService.DTO;
+using MessageService.Models;
+using MessageService.Repositories;
+
+namespace MessageService.Services
+{
+    public class MessageService : IMessageService
+    {
+        IMessageRepository messageRep;
+        IDialogRepository dialogRep;
+        public MessageService(IMessageRepository messageRep, IDialogRepository dialogRep)
+        {
+            this.messageRep= messageRep;
+            this.dialogRep= dialogRep;
+        }
+        public List<Message> GetMessagesPageFromDialog(int dialogId, int userId, int page)
+        {
+            var targetDialog = dialogRep.GetDialog(dialogId);
+            if(targetDialog is null)
+                return new List<Message>();
+            if(targetDialog.User1Id== userId||targetDialog.User2Id== userId)
+                return messageRep.GetMessagesPageFromDialog(dialogId, page);
+            return new List<Message>();
+        }
+        public async Task<Message> CreateMessage(CreateMessageRequest request, int userId)
+        {
+            var targetDialog = dialogRep.GetDialog(userId, request.RecieverId);
+            if (targetDialog is null)
+            {
+                targetDialog=new Dialog() { User1Id = userId ,User2Id=request.RecieverId,Messages=new List<Message>()};
+                targetDialog = await dialogRep.CreateDialog(targetDialog);
+                await dialogRep.Save();
+            }
+            Message newMessage = new Message()
+            {
+                DialogId=targetDialog.Id,
+                SenderId=userId,
+                Text=request.Text
+            };
+            newMessage = await messageRep.CreateMessage(newMessage);
+            await messageRep.Save();
+            return newMessage;
+        }
+        public async Task<Result<string, string>> UpdateMessage(UpdateMessageRequest request, int userId)
+        {
+            var targetMessage = messageRep.GetMessage(request.MessageId);
+            if (targetMessage.SenderId!=userId)
+            {
+                return ((string)null).ToResult("Указанное сообщение не принадлежит вам");
+            }
+            targetMessage.Text = request.NewText;
+            messageRep.UpdateMessage(targetMessage);
+            await messageRep.Save();
+            return "Успешно изменено сообщение.".ToResult("тут всё должно быть нормально.");
+        }
+        public async Task<Result<string, string>> DeleteMessage(int messageId, int userId)
+        {
+            var targetMessage = messageRep.GetMessage(messageId);
+            if (targetMessage.SenderId != userId)
+            {
+                return ((string)null).ToResult("Указанное сообщение не принадлежит вам");
+            }
+            messageRep.DeleteMessage(targetMessage);
+            await messageRep.Save();
+            return "Успешно удалено сообщение.".ToResult("Тут всё должно быть номарльно");
+        }
+    }
+}
