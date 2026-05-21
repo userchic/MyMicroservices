@@ -10,18 +10,26 @@ namespace MessageService.Services
     {
         IMessageRepository messageRep;
         IDialogRepository dialogRep;
-        public MessageService(IMessageRepository messageRep, IDialogRepository dialogRep)
+        ILogger? logger;
+        public MessageService(IMessageRepository messageRep, IDialogRepository dialogRep,ILogger<MessageService>? logger)
         {
             this.messageRep= messageRep;
             this.dialogRep= dialogRep;
+            this.logger = logger;
         }
         public List<Message> GetMessagesPageFromDialog(int dialogId, int userId, int page)
         {
             var targetDialog = dialogRep.GetDialog(dialogId);
-            if(targetDialog is null)
+            if (targetDialog is null)
+            {
+                logger?.LogWarning("Получен запрос на получение страницы сообщений не существующего диалога ID:{ID}", dialogId);
                 return new List<Message>();
-            if(targetDialog.User1Id== userId||targetDialog.User2Id== userId)
-                return messageRep.GetMessagesPageFromDialog(dialogId, page);
+            }
+            if (targetDialog.User1Id == userId || targetDialog.User2Id == userId) 
+            { 
+                return messageRep.GetMessagesPageFromDialog(dialogId, page); 
+            }
+            logger?.LogWarning("Получен запрос на получение страницы сообщений диалога ID:{ID} к которому пользователь не имеет отношения.", dialogId);
             return new List<Message>();
         }
         public async Task<Message> CreateMessage(CreateMessageRequest request, int userId)
@@ -48,6 +56,7 @@ namespace MessageService.Services
             var targetMessage = messageRep.GetMessage(request.MessageId);
             if (targetMessage.SenderId!=userId)
             {
+                logger?.LogWarning("Получен запрос на редактирование сообщения ID:{messageId} которым пользователь ID:{userID} не владеет.",targetMessage.Id,userId);
                 return ((string)null).ToResult("Указанное сообщение не принадлежит вам");
             }
             targetMessage.Text = request.NewText;
@@ -60,6 +69,7 @@ namespace MessageService.Services
             var targetMessage = messageRep.GetMessage(messageId);
             if (targetMessage.SenderId != userId)
             {
+                logger?.LogWarning("Получен запрос на удаление сообщения ID:{MessageId} которым пользователь ID:{userId} не владеет.",messageId,userId);
                 return ((string)null).ToResult("Указанное сообщение не принадлежит вам");
             }
             messageRep.DeleteMessage(targetMessage);

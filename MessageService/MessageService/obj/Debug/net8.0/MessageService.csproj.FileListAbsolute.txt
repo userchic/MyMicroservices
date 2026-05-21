@@ -53,3 +53,15 @@ C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageServic
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\obj\Debug\net8.0\MessageService.pdb
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\obj\Debug\net8.0\MessageService.genruntimeconfig.cache
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\obj\Debug\net8.0\ref\MessageService.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Prometheus.NetStandard.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Prometheus.AspNetCore.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Serilog.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll

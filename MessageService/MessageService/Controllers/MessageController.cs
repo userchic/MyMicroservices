@@ -4,6 +4,8 @@ using MessageService.DTO;
 using MessageService.Models;
 using MessageService.Services;
 using Microsoft.AspNetCore.Mvc;
+using Prometheus;
+using System.Diagnostics.Metrics;
 using System.IdentityModel.Tokens.Jwt;
 
 namespace MessageService.Controllers
@@ -16,6 +18,10 @@ namespace MessageService.Controllers
         ILogger logger;
         IValidator<CreateMessageRequest> createRequestValidator;
         IValidator<UpdateMessageRequest> updateRequestValidator;
+        Counter getMessagesPageCounter;
+        Counter sendMessageCounter;
+        Counter updateMessageCounter;
+        Counter deleteMessageCounter;
         public MessageController(ILogger<MessageController> logger, IMessageService messageService)
         {
             this.messageService = messageService;
@@ -24,6 +30,8 @@ namespace MessageService.Controllers
         [HttpGet]
         public IActionResult GetMessagesPageFromDialog(int dialogId,int page)
         {
+            getMessagesPageCounter.Inc();
+            getMessagesPageCounter.Publish();
             int? userId = GetUserId();
             if (!userId.HasValue)
             {
@@ -32,6 +40,7 @@ namespace MessageService.Controllers
             }
             if (dialogId <= 0)
             {
+                logger?.LogWarning("Получен запрос на получение страницы сообщений диалога с неправильным идентификатором диалога");
                 return Json(new { error = "Неправильный номер диалога, он должен быть больше 0." });
             }
             if (page <= 0)
@@ -44,6 +53,8 @@ namespace MessageService.Controllers
         [HttpPost]
         public async Task<IActionResult> SendMessage(CreateMessageRequest request)
         {
+            sendMessageCounter.Inc();
+            sendMessageCounter.Publish();
             int? userId = GetUserId();
             if (!userId.HasValue)
             {
@@ -61,6 +72,8 @@ namespace MessageService.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateMessage(UpdateMessageRequest request)
         {
+            updateMessageCounter.Inc();
+            updateMessageCounter.Publish();
             int? userId = GetUserId();
             if (!userId.HasValue)
             {
@@ -83,6 +96,8 @@ namespace MessageService.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteMessage(int messageId)
         {
+            deleteMessageCounter.Inc();
+            deleteMessageCounter.Publish();
             int? userId = GetUserId();
             if (!userId.HasValue)
             {
