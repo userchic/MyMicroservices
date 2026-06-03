@@ -56,9 +56,7 @@ export default function CommentInfo({ Delete, comment }: Props) {
             }
             else {
                 setState(Mode.Read)
-
             }
-
         })
     }
     return (

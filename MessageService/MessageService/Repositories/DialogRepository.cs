@@ -1,6 +1,7 @@
 ﻿using MessageService.Abstractions;
 using MessageService.DataBase;
 using MessageService.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MessageService.Repositories
 {
@@ -11,13 +12,17 @@ namespace MessageService.Repositories
         {
             this.context = context;
         }
-        public Dialog GetDialog(int dialogId)
+        public List<Dialog> GetDialogsPage(int userId, int page)
         {
-            return context.Dialogues.FirstOrDefault((dialog)=> dialog.Id==dialogId);
+            return context.Dialogues.Where((dialog) => dialog.User1Id == userId || dialog.User2Id == userId).Skip((page - 1) * 10).Take(10).ToList(); 
+        }
+        public Dialog? GetDialog(int dialogId)
+        {
+            return context.Dialogues.AsNoTracking().FirstOrDefault((dialog) => dialog.Id == dialogId);
         }
         public Dialog? GetDialog(int user1Id,int user2Id)
         {
-            return context.Dialogues.FirstOrDefault((dialog)=> dialog.User1Id == user1Id && dialog.User2Id == user2Id|| dialog.User1Id == user2Id && dialog.User2Id == user1Id);
+            return context.Dialogues.AsNoTracking().FirstOrDefault((dialog)=> dialog.User1Id == user1Id && dialog.User2Id == user2Id|| dialog.User1Id == user2Id && dialog.User2Id == user1Id);
         }
 
         public List<Dialog> GetUserDialogues(int userId, int page)

@@ -27,8 +27,6 @@ services:
         build: /NotificationsService/NotificationsService/
         environment:
             - ASPNETCORE_URLS=http://notificationsservice:4004;
-        ports:
-            - 4004:4004
         networks:
             - backend
         depends_on:
@@ -37,8 +35,14 @@ services:
         build: /CommentsService/CommentsService/
         environment:
             - ASPNETCORE_URLS=http://commentsservice:4005;
-        ports:
-            - 4005:4005
+        networks:
+            - backend
+        depends_on:
+            - db
+    messageservice:
+        build: /MessageService/MessageService/
+        environment:
+            - ASPNETCORE_URLS=http://messageservice:4006;
         networks:
             - backend
         depends_on:

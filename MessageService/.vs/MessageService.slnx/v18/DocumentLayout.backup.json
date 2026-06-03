@@ -3,36 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED8D8BCB-707C-4522-AB59-FC61598DEC07}|TestProject\\TestProject.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\testproject\\servicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED8D8BCB-707C-4522-AB59-FC61598DEC07}|TestProject\\TestProject.csproj|solutionrelative:testproject\\servicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED8D8BCB-707C-4522-AB59-FC61598DEC07}|TestProject\\TestProject.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\testproject\\validationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED8D8BCB-707C-4522-AB59-FC61598DEC07}|TestProject\\TestProject.csproj|solutionrelative:testproject\\validationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\repositories\\dialogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\repositories\\dialogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\repositories\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\repositories\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\abstractions\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\abstractions\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\database\\messagecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\database\\messagecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\repositories\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\repositories\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\models\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\models\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|c:\\users\\\u0440\u0443\u0441\u043B\u0430\u043D \u0433\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\desktop\\mymicroservices\\messageservice\\messageservice\\validators\\createmessagerequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{953404BB-2C52-30B9-3575-EB9DBD741872}|MessageService\\MessageService.csproj|solutionrelative:messageservice\\validators\\createmessagerequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,32 +50,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ValidationTests.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\TestProject\\ValidationTests.cs",
-              "RelativeDocumentMoniker": "TestProject\\ValidationTests.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\TestProject\\ValidationTests.cs",
-              "RelativeToolTip": "TestProject\\ValidationTests.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAgwCgAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MessageController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Controllers\\MessageController.cs",
+              "RelativeDocumentMoniker": "MessageService\\Controllers\\MessageController.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Controllers\\MessageController.cs",
+              "RelativeToolTip": "MessageService\\Controllers\\MessageController.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAwwGIAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T12:02:13.162Z",
+              "WhenOpened": "2026-05-29T11:39:51.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\TestProject\\ServiceTests.cs",
-              "RelativeDocumentMoniker": "TestProject\\ServiceTests.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\TestProject\\ServiceTests.cs",
-              "RelativeToolTip": "TestProject\\ServiceTests.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAiwDsAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DialogRepository.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Repositories\\DialogRepository.cs",
+              "RelativeDocumentMoniker": "MessageService\\Repositories\\DialogRepository.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Repositories\\DialogRepository.cs",
+              "RelativeToolTip": "MessageService\\Repositories\\DialogRepository.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwBEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:55:36.964Z",
+              "WhenOpened": "2026-06-02T10:49:43.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\appsettings.json",
+              "RelativeDocumentMoniker": "MessageService\\appsettings.json",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\appsettings.json",
+              "RelativeToolTip": "MessageService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-02T11:01:27.934Z",
               "EditorCaption": ""
             },
             {
@@ -78,58 +99,36 @@
               "RelativeDocumentMoniker": "MessageService\\Services\\MessageService.cs",
               "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Services\\MessageService.cs",
               "RelativeToolTip": "MessageService\\Services\\MessageService.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwB8AAACXAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwCIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:44:00.277Z",
+              "WhenOpened": "2026-05-29T17:15:36.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MessageContext.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\DataBase\\MessageContext.cs",
+              "RelativeDocumentMoniker": "MessageService\\DataBase\\MessageContext.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\DataBase\\MessageContext.cs",
+              "RelativeToolTip": "MessageService\\DataBase\\MessageContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T11:41:28.082Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MessageController.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Controllers\\MessageController.cs",
-              "RelativeDocumentMoniker": "MessageService\\Controllers\\MessageController.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Controllers\\MessageController.cs",
-              "RelativeToolTip": "MessageService\\Controllers\\MessageController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAuwCoAAACEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T11:40:48.074Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IMessageService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Abstractions\\IMessageService.cs",
-              "RelativeDocumentMoniker": "MessageService\\Abstractions\\IMessageService.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Abstractions\\IMessageService.cs",
-              "RelativeToolTip": "MessageService\\Abstractions\\IMessageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T07:36:59.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Message.cs",
-              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Models\\Message.cs",
-              "RelativeDocumentMoniker": "MessageService\\Models\\Message.cs",
-              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Models\\Message.cs",
-              "RelativeToolTip": "MessageService\\Models\\Message.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T07:33:52.99Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "MessageRepository.cs",
               "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Repositories\\MessageRepository.cs",
               "RelativeDocumentMoniker": "MessageService\\Repositories\\MessageRepository.cs",
               "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Repositories\\MessageRepository.cs",
               "RelativeToolTip": "MessageService\\Repositories\\MessageRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T06:46:16.398Z"
+              "WhenOpened": "2026-05-29T11:41:23.161Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -139,9 +138,49 @@
               "RelativeDocumentMoniker": "MessageService\\Program.cs",
               "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Program.cs",
               "RelativeToolTip": "MessageService\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T12:43:28.053Z"
+              "WhenOpened": "2026-06-02T11:19:49.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateMessageRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Validators\\CreateMessageRequestValidator.cs",
+              "RelativeDocumentMoniker": "MessageService\\Validators\\CreateMessageRequestValidator.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Validators\\CreateMessageRequestValidator.cs",
+              "RelativeToolTip": "MessageService\\Validators\\CreateMessageRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T10:07:21.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Dialog.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Models\\Dialog.cs",
+              "RelativeDocumentMoniker": "MessageService\\Models\\Dialog.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Models\\Dialog.cs",
+              "RelativeToolTip": "MessageService\\Models\\Dialog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T10:21:30.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Models\\Message.cs",
+              "RelativeDocumentMoniker": "MessageService\\Models\\Message.cs",
+              "ToolTip": "C:\\Users\\\u0420\u0443\u0441\u043B\u0430\u043D \u0413\u0430\u0431\u0437\u0430\u043B\u0438\u043B\u043E\u0432\\Desktop\\myMicroservices\\MessageService\\MessageService\\Models\\Message.cs",
+              "RelativeToolTip": "MessageService\\Models\\Message.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T10:21:32.049Z",
+              "EditorCaption": ""
             }
           ]
         }

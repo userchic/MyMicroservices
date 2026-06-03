@@ -71,6 +71,7 @@ namespace ApiGateway
                     Methods=new List<string>() { "Put" },
                 }
             },
+
             new RouteConfig()
             {
                 RouteId="CreatePost",
@@ -126,6 +127,7 @@ namespace ApiGateway
                 },
                 AuthorizationPolicy="Bearer"
             },
+
             new RouteConfig()
             {
                 RouteId="GetSubscriptions",
@@ -181,6 +183,7 @@ namespace ApiGateway
                 },
                 AuthorizationPolicy="Bearer"
             },
+
             new RouteConfig()
             {
                 RouteId="GetPersonalNotificationsRule",
@@ -225,6 +228,7 @@ namespace ApiGateway
                 },
                 AuthorizationPolicy="Bearer"
             },
+
             new RouteConfig()
             {
                 RouteId="GetCommentsPage",
@@ -269,6 +273,73 @@ namespace ApiGateway
                 },
                 AuthorizationPolicy="Bearer"
             },
+
+            new RouteConfig()
+            {
+                RouteId="GetDialog",
+                ClusterId="Message",
+                Match=new RouteMatch()
+                {
+                    Path ="/Message/GetDialog",
+                    Methods=new List<string>() { "Get" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="GetMessagesPageFromDialog",
+                ClusterId="Message",
+                Match=new RouteMatch()
+                {
+                    Path ="/Message/GetMessagesPageFromDialog",
+                    Methods=new List<string>() { "Get" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="GetDialogsPage",
+                ClusterId="Message",
+                Match=new RouteMatch()
+                {
+                    Path ="/Message/GetDialogsPage",
+                    Methods=new List<string>() { "Get" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="SendMessage",
+                ClusterId="Message",
+                Match=new RouteMatch()
+                {
+                    Path ="/Message/SendMessage",
+                    Methods=new List<string>() { "Post" },
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="UpdateMessage",
+                ClusterId="Message",
+                Match=new RouteMatch()
+                {
+                    Path ="/Message/UpdateMessage",
+                    Methods=new List<string>() { "Put"},
+                },
+                AuthorizationPolicy="Bearer"
+            },
+            new RouteConfig()
+            {
+                RouteId="DeleteMessage",
+                ClusterId="Message",
+                Match=new RouteMatch()
+                {
+                    Path ="/Message/DeleteMessage",
+                    Methods=new List<string>() { "Delete"},
+                },
+                AuthorizationPolicy="Bearer"
+            },
         };
         public static IReadOnlyList<ClusterConfig> Clusters = new List<ClusterConfig>()
         {
@@ -288,6 +359,19 @@ namespace ApiGateway
             },
             new ClusterConfig()
             {
+                ClusterId="TextPost",
+                Destinations=new Dictionary<string, DestinationConfig>()
+                {
+                    {
+                        "destination1",new DestinationConfig()
+                        {
+                            Address="http://textpostsservice:4002"
+                        }
+                    }
+                }
+            },
+            new ClusterConfig()
+            {
                 ClusterId="Subscriptions",
                 LoadBalancingPolicy=LoadBalancingPolicies.Random,
                 Destinations=new Dictionary<string, DestinationConfig>()
@@ -300,19 +384,7 @@ namespace ApiGateway
                     }
                 }
             },
-            new ClusterConfig()
-            {
-                ClusterId="TextPost",
-                Destinations=new Dictionary<string, DestinationConfig>()
-                {
-                    {
-                        "destination1",new DestinationConfig()
-                        {
-                            Address="http://textpostsservice:4002"
-                        }
-                    }
-                }
-            },
+
             new ClusterConfig()
             {
                 ClusterId="Notifications",
@@ -335,6 +407,19 @@ namespace ApiGateway
                         "destination1",new DestinationConfig()
                         {
                             Address="http://commentsservice:4005"
+                        }
+                    }
+                }
+            },
+            new ClusterConfig()
+            {
+                ClusterId="Message",
+                Destinations=new Dictionary<string, DestinationConfig>()
+                {
+                    {
+                        "destination1",new DestinationConfig()
+                        {
+                            Address="http://messageservice:4006"
                         }
                     }
                 }

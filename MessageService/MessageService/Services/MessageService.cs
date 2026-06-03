@@ -17,19 +17,33 @@ namespace MessageService.Services
             this.dialogRep= dialogRep;
             this.logger = logger;
         }
+        public Dialog? GetDialog(int dialogId)
+        {
+            var dialog = dialogRep.GetDialog(dialogId);
+            return dialog;
+        }
+        public Dialog? GetDialog(int targetUserId,int userId)
+        {
+            var dialog = dialogRep.GetDialog(targetUserId,userId);
+            return dialog;
+        }
+        public List<Dialog> GetDialogsPage( int userId, int page)
+        {
+            return dialogRep.GetUserDialogues(userId,page);
+        }
         public List<Message> GetMessagesPageFromDialog(int dialogId, int userId, int page)
         {
             var targetDialog = dialogRep.GetDialog(dialogId);
             if (targetDialog is null)
             {
-                logger?.LogWarning("Получен запрос на получение страницы сообщений не существующего диалога ID:{ID}", dialogId);
+                logger?.LogWarning("Получен запрос на получение страницы сообщений не существующего диалога пользователя ID:{userId} с пользователем ID:{ID}", userId,dialogId);
                 return new List<Message>();
             }
             if (targetDialog.User1Id == userId || targetDialog.User2Id == userId) 
             { 
                 return messageRep.GetMessagesPageFromDialog(dialogId, page); 
             }
-            logger?.LogWarning("Получен запрос на получение страницы сообщений диалога ID:{ID} к которому пользователь не имеет отношения.", dialogId);
+            logger?.LogWarning("Получен запрос на получение страницы сообщений диалога ID:{ID} к которому пользователь ID:{userId} не имеет отношения.",targetDialog.Id, dialogId);
             return new List<Message>();
         }
         public async Task<Message> CreateMessage(CreateMessageRequest request, int userId)
@@ -45,7 +59,8 @@ namespace MessageService.Services
             {
                 DialogId=targetDialog.Id,
                 SenderId=userId,
-                Text=request.Text
+                Text=request.Text,
+                CreationTime=DateTime.UtcNow
             };
             newMessage = await messageRep.CreateMessage(newMessage);
             await messageRep.Save();

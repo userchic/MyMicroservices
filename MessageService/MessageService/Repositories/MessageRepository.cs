@@ -15,10 +15,9 @@ namespace MessageService.Repositories
         {
             return context.Messages.FirstOrDefault((message)=>message.Id == messageId);
         }
-
         public List<Message> GetMessagesPageFromDialog(int dialogId, int page)
         {
-            return context.Messages.Where((message) => message.DialogId == dialogId).Skip((page - 1) * 10).Take(10).ToList();
+            return context.Messages.Where((message) => message.DialogId == dialogId).OrderByDescending((message)=>message.CreationTime).Skip((page - 1) * 10).Take(10).ToList();
         }
         public async Task<Message> CreateMessage(Message newMessage)
         {

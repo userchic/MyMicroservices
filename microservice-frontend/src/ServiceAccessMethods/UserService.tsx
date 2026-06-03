@@ -14,7 +14,7 @@ export async function RequestLogin(Login: string, Password: string) {
     })
     let json = await res.json()
     if (json.token !== undefined)
-        document.cookie = `Authtoken=${json.token}`
+        document.cookie = `Authtoken=${json.token}; Max-Age=30;`
     return json
 }
 export async function RequestRegister(Login: string, Password: string, Name: string, Surname: string, Fatname: string, Birthday: Date, Email: string) {

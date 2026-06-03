@@ -65,3 +65,6 @@ C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageServic
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\MessageService.xml
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\obj\Debug\net8.0\MessageService.xml
+C:\Users\Руслан Габзалилов\Desktop\myMicroservices\MessageService\MessageService\bin\Debug\net8.0\Newtonsoft.Json.dll
