@@ -5,7 +5,7 @@ export let GatewayUrl = "http://localhost:8080"
 export function GetToken(): string | undefined {
     let tokenCookie = document.cookie.split(" ").find((cookie) => {
         return cookie.startsWith("Authtoken=")
-    })?.slice(10)
+    })?.slice(10).replace(";", "")
     return tokenCookie
 }
 export function CheckAuthorization(response: Response) {

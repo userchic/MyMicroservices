@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MessageService/MessageService.csproj" />
+  <Project Path="TestProject/TestProject.csproj" Id="ed8d8bcb-707c-4522-ab59-fc61598dec07" />
+</Solution>

@@ -197,4 +197,5 @@
 .no-margin-block {
   display: block;
   border: 1px solid gray;
+  margin: 0
 }

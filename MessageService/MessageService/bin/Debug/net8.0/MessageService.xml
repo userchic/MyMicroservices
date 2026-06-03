@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MessageService</name>
+    </assembly>
+    <members>
+        <member name="M:MessageService.Controllers.MessageController.GetDialogsPage(System.Int32)">
+            <summary>
+            Запрос на получение страницы диалогов пользователя
+            </summary>
+            <param name="page"> Страница</param>
+            <returns>Возвращает страницу с диалогами, либо error.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessageController.GetDialog(System.Int32)">
+            <summary>
+            Запрос на получение даилога текущего пользователя с конкретным пользователем
+            </summary>
+            <param name="targetUserId">Идентификатор целевого пользователя</param>
+            <returns>Диалог с указанным пользователем, либо error.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessageController.GetMessagesPageFromDialog(System.Int32,System.Int32)">
+            <summary>
+            Запрос на получение страницы сообщений пользователя из диалога
+            </summary>
+            <param name="dialogId">Идентификатор диалога</param>
+            <param name="page">Страница</param>
+            <returns>Страницу с сообщениями из конкретного диалога, либо error.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessageController.SendMessage(MessageService.DTO.CreateMessageRequest)">
+            <summary>
+            Запрос на создание сообщения в рамках диалога, если диалог еще не нечат то он будет создан
+            </summary>
+            <param name="request">Запрос на создание сообщения, либо error или errors.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessageController.UpdateMessage(MessageService.DTO.UpdateMessageRequest)">
+            <summary>
+            Запрос на изменение сообщения
+            </summary>
+            <param name="request">Запрос на изменение сообщения</param>
+            <returns>сообщение об успехе, либо error или errors.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessageController.DeleteMessage(System.Int32)">
+            <summary>
+            Запрос на удаление сообщения
+            </summary>
+            <param name="messageId">Идентификатор сообщения</param>
+            <returns>сообщение об успехе, либо error</returns>
+        </member>
+    </members>
+</doc>

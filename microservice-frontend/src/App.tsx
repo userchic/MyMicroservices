@@ -11,6 +11,8 @@ import RegisterSection from './Components/RegisterSection'
 import ProfileSection from './Components/ProfileSection'
 import ProfilesSection from './Components/ProfilesSection'
 import NotificationsRuleSection from './Components/NotificationRuleSection'
+import MessageSection from './Components/MessageSection'
+import DialogSection from './Components/DialogSection'
 
 function App() {
   const [isAuthenticated, setAuth] = useState<boolean>(store.getState().Auth.isAuthenticated)
@@ -32,15 +34,15 @@ function App() {
             mode="horizontal"
             items={isAuthenticated ? [
               { key: "siteName", label: <Link to={"/"}>Минималистичная соцсеть</Link> },
-              { key: "profile", label: <Link to={"/Profile"}>Профиль</Link> },
+              { key: "profile", label: <Link to={"/Profile"}>Профиль {store.getState().Auth.login}</Link> },
               { key: "tasks", label: <Link to={"/Profiles"}>Поиск профилей</Link> },
+              { key: "dialogues", label: <Link to={"/Dialogs"}> Диалоги</Link> },
               { key: "norifications", label: <Link to={"/NotificationSettings"}>Настройка уведомлений</Link> },
               { key: "logout", label: <input type="button" onClick={ExecuteLogout} value="Выход" /> },
             ] : [
               { key: "siteName", label: <Link to={"/"}>Минималичтичная соцсеть</Link> },
               { key: "login", label: <Link to={"/Login"}>Вход</Link> },
               { key: "registry", label: <Link to={"/Registry"}>Регистрация</Link> },
-
             ]}
             style={{ flex: 1, minWidth: 0 }}
           ></Menu>
@@ -53,6 +55,8 @@ function App() {
               <Route path='/Profile' element={<ProfileSection />} />
               <Route path='/Profile/:login' element={<ProfileSection />} />
               <Route path='/Profiles' element={<ProfilesSection />} />
+              <Route path='/Dialogs' element={<DialogSection />} />
+              <Route path='/Messages/:targetUserId' element={<MessageSection />} />
               <Route path='/NotificationSettings' element={<NotificationsRuleSection />} />
             </Route>
           </Routes>

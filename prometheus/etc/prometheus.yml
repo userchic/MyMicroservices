@@ -50,3 +50,13 @@ scrape_configs:
     scheme: 'http'
     static_configs:
       - targets: ["notificationsservice:4004"]
+
+  - job_name: "CommentsService"
+    scheme: 'http'
+    static_configs:
+      - targets: ["commentsservice:4005"]
+
+  - job_name: "MessagesService"
+    scheme: 'http'
+    static_configs:
+      - targets: ["messageservice:4006"]

@@ -1,0 +1,71 @@
+[
+  {
+    "ContainingType": "MessageService.Controllers.MessageController",
+    "Method": "DeleteMessage",
+    "RelativePath": "Message/DeleteMessage",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "messageId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MessageService.Controllers.MessageController",
+    "Method": "GetMessagesPageFromDialog",
+    "RelativePath": "Message/GetMessagesPageFromDialog",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dialogId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MessageService.Controllers.MessageController",
+    "Method": "SendMessage",
+    "RelativePath": "Message/SendMessage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MessageService.DTO.CreateMessageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MessageService.Controllers.MessageController",
+    "Method": "UpdateMessage",
+    "RelativePath": "Message/UpdateMessage",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MessageService.DTO.UpdateMessageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -68,9 +68,11 @@ export default function ProfilesSection() {
             {Profiles.map((profile) => {
                 return (
                     <>
-                        <div className="block">
+                        <div className="block" key={profile.id}>
                             <Profile User={profile} />
                             <Link to={`/Profile/${profile.login}`} > Перейти к профилю</Link>
+                            <br />
+                            <Link to={`/Messages/${profile.id}`}>Открыть диалог</Link>
                         </div>
                     </>
                 )
